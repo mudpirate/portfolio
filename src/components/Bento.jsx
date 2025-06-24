@@ -148,11 +148,16 @@ const Bento = ({ isMobile }) => {
         <h2 className="text-xl text-center text-white font-bold bg-gray-950 border-[0.5px] border-white/20 rounded-xl py-1.5 px-4 shadow-lg mb-3">
           Contact Me
         </h2>
-        <form className="space-y-3 flex-1 flex flex-col justify-between">
+        <form
+          className="space-y-3 flex-1 flex flex-col justify-between "
+          action="https://formspree.io/f/xldnpykv"
+          method="post"
+        >
           <div className="space-y-3">
             <div>
               <input
                 type="email"
+                name="email"
                 placeholder="Your Email"
                 className="w-full bg-white/10 border-[0.5px] border-white/20 rounded-lg p-1.5 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all"
               />
