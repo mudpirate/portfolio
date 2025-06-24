@@ -165,6 +165,7 @@ const Bento = ({ isMobile }) => {
             <div>
               <textarea
                 placeholder="Your Message"
+                name="message"
                 rows="2"
                 className="w-full bg-white/10 border-[0.5px] border-white/20 rounded-lg p-1.5 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all resize-none"
               ></textarea>
