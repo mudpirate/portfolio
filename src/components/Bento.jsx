@@ -127,7 +127,7 @@ const Bento = ({ isMobile }) => {
         } bg-white/10 rounded-2xl shadow-xl p-4 min-h-[200px] shiny-gradient hover:bg-white/15 transition-all duration-300`}
       >
         <div className="mb-2 mx-2 space-y-4">
-          <h1 className="text-2xl text-center text-white font-bold bg-gradient-to-r from-gray-800 to-gray-900 border-[0.5px] border-white/20 rounded-xl py-2 px-4 shadow-lg">
+          <h1 className="text-2xl text-center text-white font-bold bg-gray-950 border-[0.5px] border-white/20 rounded-xl py-2 px-4 shadow-lg">
             About me
           </h1>
           <p className="text-white/90 font-medium rounded-xl leading-relaxed tracking-wide">
@@ -145,7 +145,7 @@ const Bento = ({ isMobile }) => {
           !isMobile ? "col-span-2" : ""
         } bg-white/10 rounded-2xl shadow-xl p-4 flex flex-col min-h-[200px] shiny-gradient hover:bg-white/15 transition-all duration-300`}
       >
-        <h2 className="text-xl text-center text-white font-bold bg-gradient-to-r from-gray-800 to-gray-900 border-[0.5px] border-white/20 rounded-xl py-1.5 px-4 shadow-lg mb-3">
+        <h2 className="text-xl text-center text-white font-bold bg-gray-950 border-[0.5px] border-white/20 rounded-xl py-1.5 px-4 shadow-lg mb-3">
           Contact Me
         </h2>
         <form className="space-y-3 flex-1 flex flex-col justify-between">
@@ -179,7 +179,7 @@ const Bento = ({ isMobile }) => {
           !isMobile ? "col-span-2 row-span-2" : ""
         } bg-white/10 rounded-2xl shadow-xl p-4 flex flex-col shiny-gradient hover:bg-white/15 transition-all duration-300`}
       >
-        <h2 className="text-2xl text-center text-white font-bold bg-gradient-to-r from-gray-800 to-gray-900 border-[0.5px] border-white/20 rounded-xl py-2 px-4 shadow-lg mb-3">
+        <h2 className="text-2xl text-center text-white font-bold bg-gray-950 border-[0.5px] border-white/20 rounded-xl py-2 px-4 shadow-lg mb-3">
           Socials
         </h2>
         <div className="grid grid-cols-3 gap-3 p-2">
@@ -207,7 +207,7 @@ const Bento = ({ isMobile }) => {
           !isMobile ? "row-span-2" : ""
         } bg-white/10 rounded-2xl shadow-xl p-4 flex flex-col shiny-gradient hover:bg-white/15 transition-all duration-300`}
       >
-        <h2 className="text-2xl text-center mb-10 text-white font-bold bg-gradient-to-r from-gray-800 to-gray-900 border-[0.5px] border-white/20 rounded-xl py-2 px-4 shadow-lg mb-2">
+        <h2 className="text-2xl text-center mb-10 text-white font-bold bg-gray-950 border-[0.5px] border-white/20 rounded-xl py-2 px-4 shadow-lg mb-2">
           Projects
         </h2>
         <div className="flex flex-col gap-3">
