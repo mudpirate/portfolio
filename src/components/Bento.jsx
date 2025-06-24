@@ -103,7 +103,7 @@ const Bento = ({ isMobile }) => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentQuote((prev) => (prev + 1) % quotes.length);
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(timer);
   }, []);
