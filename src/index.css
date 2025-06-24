@@ -1,7 +1,12 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @apply bg-gradient-to-l from-gray-950 via-gray-800 to-gray-900 min-h-screen;
+  -webkit-overflow-scrolling: touch;
 }
 
 @keyframes shine {
