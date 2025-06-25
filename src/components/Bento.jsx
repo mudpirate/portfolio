@@ -121,7 +121,7 @@ const Bento = ({ isMobile }) => {
             className="object-cover w-20 h-20 border-2 border-gray-600 rounded-2xl"
             alt="Profile"
           />
-          <span className="text-white text-lg font-bold ">
+          <span className="text-white text-lg font-medium ">
             Hi, This is mudpirate here. Welcome to my portfolio website.
           </span>
         </div>
