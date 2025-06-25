@@ -114,6 +114,18 @@ const Bento = ({ isMobile }) => {
 
   return (
     <div className={gridClassName}>
+      {isMobile && (
+        <div className="flex   backdrop-blur-lg bg-white/10 p-3 shiny-gradient rounded-2xl justify-start gap-5 mb-4 w-full">
+          <img
+            src={logo}
+            className="object-cover w-20 h-20 border-2 border-gray-600 rounded-2xl"
+            alt="Profile"
+          />
+          <span className="text-white text-lg font-medium ">
+            Hi, This is mudpirate here. Welcome to my portfolio website.
+          </span>
+        </div>
+      )}
       <div
         className={`moving-border backdrop-blur-lg ${
           !isMobile ? "row-span-2" : ""
@@ -264,15 +276,22 @@ const Bento = ({ isMobile }) => {
       </div>
 
       <div
-        className={`moving-border backdrop-blur-lg ${
-          !isMobile ? "" : ""
-        } bg-white/10 rounded-2xl shadow-xl overflow-hidden min-h-[200px] shiny-gradient hover:bg-white/15 transition-all duration-300 hidden sm:block`}
+        className={`flex justify-center items-center${
+          isMobile ? " hidden" : ""
+        }`}
       >
-        <img
-          src={logo}
-          className="object-cover w-full h-full rounded-2xl hover:scale-105 transition-transform duration-500"
-          alt="Profile"
-        />
+        {" "}
+        <div
+          className={`moving-border flex backdrop-blur-lg ${
+            !isMobile ? "" : ""
+          } bg-white/10 rounded-2xl shadow-xl overflow-hidden min-h-[full] shiny-gradient hover:bg-white/15 transition-all duration-300 sm:block`}
+        >
+          <img
+            src={logo}
+            className="object-cover w-full h-full border-2 border-gray-600 rounded-2xl hover:scale-105 transition-transform duration-500"
+            alt="Profile"
+          />
+        </div>
       </div>
     </div>
   );
