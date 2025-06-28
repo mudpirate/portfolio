@@ -225,18 +225,20 @@ const Bento = ({ isMobile }) => {
           !isMobile ? "row-span-2" : ""
         } bg-white/10 rounded-2xl shadow-xl p-4 flex flex-col shiny-gradient hover:bg-white/15 transition-all duration-300`}
       >
-        <h2 className="text-2xl text-center mb-10 text-white font-bold bg-gray-950 border-[0.5px] border-white/20 rounded-xl py-2 px-4 shadow-lg mb-2">
+        <h2 className="text-2xl text-center  text-white font-bold bg-gray-950 border-[0.5px] border-white/20 rounded-xl py-2 px-4 shadow-lg mb-2">
           Projects
         </h2>
         <div className="flex flex-col gap-3">
-          <div className="bg-white/10 rounded-xl p-4 border-[0.5px] border-white/20 hover:bg-white/20 transition-all duration-300 group">
+          <a
+            href="https://github.com/mudpirate/Bot-Verse-chat-app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white/10 rounded-xl p-4 border-[0.5px] mt-4 border-white/20 hover:bg-white/20 transition-all duration-300 group cursor-pointer"
+          >
             <h3 className="text-lg font-bold text-white mb-2">
               Botverse Chat App
             </h3>
-            <p className="text-white/80 text-sm mb-3">
-              Real-time chat application with AI-powered chatbots, user rooms,
-              and message encryption.
-            </p>
+
             <div className="flex flex-wrap gap-2">
               <span className="text-xs bg-white/20 text-white px-2 py-1 rounded-md">
                 React.js
@@ -251,7 +253,32 @@ const Bento = ({ isMobile }) => {
                 MongoDB
               </span>
             </div>
-          </div>
+          </a>
+          <a
+            href="https://github.com/mudpirate/e-commerce"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white/10 rounded-xl p-4 border-[0.5px] mt-4 border-white/20 hover:bg-white/20 transition-all duration-300 group cursor-pointer"
+          >
+            <h3 className="text-lg font-bold text-white mb-2">
+              E-Commerce store
+            </h3>
+
+            <div className="flex flex-wrap gap-2">
+              <span className="text-xs bg-white/20 text-white px-2 py-1 rounded-md">
+                React.js
+              </span>
+              <span className="text-xs bg-white/20 text-white px-2 py-1 rounded-md">
+                zustand
+              </span>
+              <span className="text-xs bg-white/20 text-white px-2 py-1 rounded-md">
+                tailwind
+              </span>
+              <span className="text-xs bg-white/20 text-white px-2 py-1 rounded-md">
+                express
+              </span>
+            </div>
+          </a>
         </div>
       </div>
 
