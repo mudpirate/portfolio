@@ -1,6 +1,5 @@
 import { BiLogoPostgresql } from "react-icons/bi";
 import { DiJavascript } from "react-icons/di";
-
 import { FaGitAlt, FaGithub } from "react-icons/fa6";
 import { IoLogoNodejs } from "react-icons/io5";
 import {
@@ -23,19 +22,14 @@ import {
   TbBrandTypescript,
   TbHexagonLetterC,
 } from "react-icons/tb";
-import { VscTerminalLinux, VscTools } from "react-icons/vsc";
 
 const Skills = () => {
   const skills = [
-    // { id: 1, icon: <RiHtml5Fill />, text: "HTML" },
-    // { id: 2, icon: <FaCss3Alt />, text: "CSS" },
     { id: 1, icon: <RiReactjsLine />, text: "ReactJs" },
-
     { id: 3, icon: <DiJavascript />, text: "JS" },
     { id: 5, icon: <RiTailwindCssFill />, text: "Tailwind" },
     { id: 6, icon: <SiShadcnui />, text: "shadcn" },
-    { id: 7, icon: <TbBrandFramerMotion />, text: " Motion" },
-
+    { id: 7, icon: <TbBrandFramerMotion />, text: "Motion" },
     { id: 9, icon: <IoLogoNodejs />, text: "NodeJS" },
     { id: 10, icon: <SiExpress />, text: "Express" },
     { id: 14, icon: <FaGitAlt />, text: "Git" },
@@ -44,29 +38,31 @@ const Skills = () => {
     { id: 11, icon: <SiPostman />, text: "Postman" },
     { id: 15, icon: <FaGithub />, text: "GitHub" },
     { id: 4, icon: <TbBrandTypescript />, text: "TS" },
-
     { id: 18, icon: <TbBrandCpp />, text: "C++" },
-
     { id: 13, icon: <SiMongodb />, text: "Mongo" },
   ];
 
   return (
-    <div className="h-full p-1 flex flex-col">
-      <h2 className="text-2xl text-center text-white font-bold bg-gray-950 border-[0.5px] border-white/20 rounded-xl py-2 px-4 shadow-lg mb-4">
+    <div className="h-full p-2 flex flex-col">
+      <h2 className="text-2xl text-center text-white font-bold bg-gray-950 border border-white/20 rounded-xl py-2 px-4 shadow-lg mb-4">
         Skills
       </h2>
-      <div className="grid grid-cols-4 items-center gap-2 text-sm  ">
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-sm">
         {skills.map((skill) => (
           <div
             key={skill.id}
             className="flex items-center gap-2 p-2 rounded-lg bg-white/10 border border-white/10 hover:bg-white/20 transition-all duration-300"
           >
             <span className="text-white/90 text-lg">{skill.icon}</span>
-            <span className="text-white/80 font-medium">{skill.text}</span>
+            <span className="text-white/80 font-medium truncate">
+              {skill.text}
+            </span>
           </div>
         ))}
       </div>
-      <div className=" h-full text-white/80 font-bold flex mt-4  gap-2 p-2 rounded-lg bg-white/10 border border-white/10 transition-all duration-300">
+
+      <div className="mt-4 p-2 rounded-lg bg-white/10 border border-white/10 text-white/80 font-bold text-center">
         Learning more stuff gradually...
       </div>
     </div>

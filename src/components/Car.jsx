@@ -67,17 +67,17 @@ const Car = ({ cars }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 title="GitHub"
-                className="flex items-center gap-2 px-3 md:px-4 py-2 rounded-lg bg-gray-900/80 text-white hover:bg-gray-800 transition-all shadow-md hover:scale-105 text-sm md:text-base"
+                className="flex items-center gap-2 px-3 md:px-4 py-2 rounded-lg bg-white/30 text-white hover:bg-gray-800 transition-all shadow-md hover:scale-105 text-sm md:text-base"
               >
                 <FaGithub className="text-lg md:text-xl" />
-                <span className="font-medium">GitHub</span>
+                <span className="font-medium text-black">GitHub</span>
               </a>
               <a
                 href={car.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Live Demo"
-                className="flex items-center gap-2 px-3 md:px-4 py-2 rounded-lg bg-gray-400 hover:from-cyan-600 hover:to-blue-600 transition-all shadow-md hover:scale-105 text-sm md:text-base"
+                className="flex items-center gap-2 px-3 md:px-4 py-2 rounded-lg bg-white/30 hover:from-cyan-600 hover:to-blue-600 transition-all shadow-md hover:scale-105 text-sm md:text-base"
               >
                 <svg
                   width="20"
