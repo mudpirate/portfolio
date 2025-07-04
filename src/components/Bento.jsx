@@ -10,36 +10,37 @@ import {
   FaSnapchatGhost,
   FaGithub,
 } from "react-icons/fa";
+import Projects from "./Projects";
 
 const Bento = ({ isMobile }) => {
   const socials = [
     {
-      icon: <FaGithub className="text-3xl" />,
+      icon: <FaGithub className="text-2xl sm:text-3xl" />,
       label: "GitHub",
       link: "https://github.com/mudpirate",
     },
     {
-      icon: <FaLinkedinIn className="text-3xl" />,
+      icon: <FaLinkedinIn className="text-2xl sm:text-3xl" />,
       label: "LinkedIn",
       link: "https://www.linkedin.com/in/nomesh-singh-121510328/",
     },
     {
-      icon: <FaTwitter className="text-3xl" />,
+      icon: <FaTwitter className="text-2xl sm:text-3xl" />,
       label: "Twitter",
       link: "https://x.com/mud_pirate__",
     },
     {
-      icon: <FaDiscord className="text-3xl" />,
+      icon: <FaDiscord className="text-2xl sm:text-3xl" />,
       label: "Discord",
       link: "https://discord.com/",
     },
     {
-      icon: <FaFacebookF className="text-3xl" />,
+      icon: <FaFacebookF className="text-2xl sm:text-3xl" />,
       label: "Facebook",
       link: "https://facebook.com/",
     },
     {
-      icon: <FaInstagram className="text-3xl" />,
+      icon: <FaInstagram className="text-2xl sm:text-3xl" />,
       label: "Instagram",
       link: "https://instagram.com/",
     },
@@ -108,219 +109,115 @@ const Bento = ({ isMobile }) => {
     return () => clearInterval(timer);
   }, []);
 
-  const gridClassName = isMobile
-    ? "grid grid-cols-1 gap-4 p-4 pb-20 max-w-full min-h-screen"
-    : "grid grid-cols-5 gap-4 p-4 max-w-full min-h-screen";
+  const gridClassName =
+    "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 p-4 sm:p-6 max-w-full min-h-screen";
 
   return (
-    <div className={gridClassName}>
-      {isMobile && (
-        <div className="flex   backdrop-blur-lg bg-white/10 p-3 shiny-gradient rounded-2xl justify-start gap-5 mb-4 w-full">
+    <>
+      <div className={gridClassName}>
+        {isMobile && (
+          <div className="block md:hidden items-center backdrop-blur-lg bg-white/10 p-4 rounded-2xl gap-3 mb-4 w-full max-w-xs mx-auto text-center">
+            <img
+              src={logo}
+              className="object-cover w-16 h-16 mx-auto border-2 border-gray-600 rounded-full mb-2"
+              alt="Profile"
+            />
+            <p className="text-white text-sm">
+              Hi, This is mudpirate here. Welcome to my portfolio website.
+            </p>
+          </div>
+        )}
+        <div className="hidden lg:block w-full max-w-xs mx-auto">
           <img
             src={logo}
-            className="object-cover w-20 h-20 border-2 border-gray-600 rounded-2xl"
+            className="object-cover w-full h-auto border-2 border-gray-600 rounded-2xl hover:scale-105 transition-transform duration-500"
             alt="Profile"
           />
-          <span className="text-white text-lg font-medium ">
-            Hi, This is mudpirate here. Welcome to my portfolio website.
-          </span>
         </div>
-      )}
-      <div
-        className={`moving-border backdrop-blur-lg ${
-          !isMobile ? "row-span-2" : ""
-        } bg-white/10 rounded-2xl shadow-xl min-h-[200px] shiny-gradient hover:bg-white/15 transition-all duration-300`}
-      >
-        <Skills />
-      </div>
-      <div
-        className={`moving-border backdrop-blur-lg ${
-          !isMobile ? "col-span-2" : ""
-        } bg-white/10 rounded-2xl shadow-xl p-4 min-h-[200px] shiny-gradient hover:bg-white/15 transition-all duration-300`}
-      >
-        <div className="mb-2 mx-2 space-y-4">
-          <h1 className="text-2xl text-center text-white font-bold bg-gray-950 border-[0.5px] border-white/20 rounded-xl py-2 px-4 shadow-lg">
-            About me
+
+        <div className="bg-white/10 rounded-2xl shadow-xl p-4 w-full max-w-xl mx-auto col-span-2 shiny-gradient">
+          <h1 className="text-xl sm:text-2xl text-white font-bold mb-4 text-center">
+            About Me
           </h1>
-          <p className="text-white/90 font-medium rounded-xl leading-relaxed tracking-wide">
-            Hi, I'm Mud Pirate(Nomesh) — a passionate and fast-learning
+          <p className="text-white text-sm sm:text-base">
+            Hi, I'm Mud Pirate (Nomesh) — a passionate and fast-learning
             full-stack developer currently pursuing a B.Tech in Information
             Technology at the University of Kalyani, West Bengal. As a
             sophomore, I've already immersed myself in the world of web
-            development I'm most comfortable working with technologies like
+            development. I'm most comfortable working with technologies like
             React, Express, Tailwind CSS, and shadcn/ui.
           </p>
         </div>
-      </div>
-      <div
-        className={`moving-border backdrop-blur-lg ${
-          !isMobile ? "col-span-2" : ""
-        } bg-white/10 rounded-2xl shadow-xl p-4 flex flex-col min-h-[200px] shiny-gradient hover:bg-white/15 transition-all duration-300`}
-      >
-        <h2 className="text-xl text-center text-white font-bold bg-gray-950 border-[0.5px] border-white/20 rounded-xl py-1.5 px-4 shadow-lg mb-3">
-          Contact Me
-        </h2>
-        <form
-          className="space-y-3 flex-1 flex flex-col justify-between "
-          action="https://formspree.io/f/xldnpykv"
-          method="post"
-        >
-          <div className="space-y-3">
-            <div>
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                className="w-full bg-white/10 border-[0.5px] border-white/20 rounded-lg p-1.5 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all"
-              />
-            </div>
-            <div>
-              <textarea
-                placeholder="Your Message"
-                name="message"
-                rows="2"
-                className="w-full bg-white/10 border-[0.5px] border-white/20 rounded-lg p-1.5 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all resize-none"
-              ></textarea>
-            </div>
-          </div>
-          <button
-            type="submit"
-            className="w-full bg-white/20 hover:bg-white/30 text-white font-semibold py-1.5 px-4 rounded-lg transition-all duration-300 border-[0.5px] border-white/20 hover:shadow-lg"
-          >
-            Send Message
-          </button>
-        </form>
-      </div>
 
-      <div
-        className={`moving-border backdrop-blur-lg ${
-          !isMobile ? "col-span-2 row-span-2" : ""
-        } bg-white/10 rounded-2xl shadow-xl p-4 flex flex-col shiny-gradient hover:bg-white/15 transition-all duration-300`}
-      >
-        <h2 className="text-2xl text-center text-white font-bold bg-gray-950 border-[0.5px] border-white/20 rounded-xl py-2 px-4 shadow-lg mb-3">
-          Socials
-        </h2>
-        <div className="grid grid-cols-3 gap-3 p-2">
-          {socials.map((social, index) => (
-            <a
-              key={index}
-              href={social.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col items-center gap-3 p-3 bg-white/10 rounded-xl hover:bg-white/20 transition-all duration-300 border-[0.5px] border-white/20 group"
+        <div className="bg-white/10 rounded-2xl shadow-xl p-4 w-full max-w-xl mx-auto col-span-2 shiny-gradient">
+          <h2 className="text-xl text-white font-bold mb-3 text-center">
+            Contact Me
+          </h2>
+          <form
+            className="space-y-4"
+            action="https://formspree.io/f/xldnpykv"
+            method="post"
+          >
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              className="w-full bg-white/10 border border-white/20 rounded-lg p-2 text-white placeholder-white/50 focus:outline-none"
+            />
+            <textarea
+              placeholder="Your Message"
+              name="message"
+              rows="3"
+              className="w-full bg-white/10 border border-white/20 rounded-lg p-2 text-white placeholder-white/50 focus:outline-none resize-none"
+            ></textarea>
+            <button
+              type="submit"
+              className="w-full bg-white/20 hover:bg-white/30 text-white font-semibold py-2 px-4 rounded-lg"
             >
-              <div className="p-3 flex justify-center items-center rounded-xl bg-white/10 group-hover:bg-white/20 transition-all">
-                {social.icon}
-              </div>
-              <span className="text-white font-medium text-sm">
-                {social.label}
-              </span>
-            </a>
-          ))}
+              Send Message
+            </button>
+          </form>
         </div>
-      </div>
 
-      <div
-        className={`moving-border backdrop-blur-lg ${
-          !isMobile ? "row-span-2" : ""
-        } bg-white/10 rounded-2xl shadow-xl p-4 flex flex-col shiny-gradient hover:bg-white/15 transition-all duration-300`}
-      >
-        <h2 className="text-2xl text-center  text-white font-bold bg-gray-950 border-[0.5px] border-white/20 rounded-xl py-2 px-4 shadow-lg mb-2">
-          Projects
-        </h2>
-        <div className="flex flex-col gap-3">
-          <a
-            href="https://github.com/mudpirate/Bot-Verse-chat-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white/10 rounded-xl p-4 border-[0.5px] mt-4 border-white/20 hover:bg-white/20 transition-all duration-300 group cursor-pointer"
-          >
-            <h3 className="text-lg font-bold text-white mb-2">
-              Botverse Chat App
-            </h3>
-
-            <div className="flex flex-wrap gap-2">
-              <span className="text-xs bg-white/20 text-white px-2 py-1 rounded-md">
-                React.js
-              </span>
-              <span className="text-xs bg-white/20 text-white px-2 py-1 rounded-md">
-                Socket.io
-              </span>
-              <span className="text-xs bg-white/20 text-white px-2 py-1 rounded-md">
-                GeminiAPI
-              </span>
-              <span className="text-xs bg-white/20 text-white px-2 py-1 rounded-md">
-                MongoDB
-              </span>
-            </div>
-          </a>
-          <a
-            href="https://github.com/mudpirate/e-commerce"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white/10 rounded-xl p-4 border-[0.5px] mt-4 border-white/20 hover:bg-white/20 transition-all duration-300 group cursor-pointer"
-          >
-            <h3 className="text-lg font-bold text-white mb-2">
-              E-Commerce store
-            </h3>
-
-            <div className="flex flex-wrap gap-2">
-              <span className="text-xs bg-white/20 text-white px-2 py-1 rounded-md">
-                React.js
-              </span>
-              <span className="text-xs bg-white/20 text-white px-2 py-1 rounded-md">
-                zustand
-              </span>
-              <span className="text-xs bg-white/20 text-white px-2 py-1 rounded-md">
-                tailwind
-              </span>
-              <span className="text-xs bg-white/20 text-white px-2 py-1 rounded-md">
-                express
-              </span>
-            </div>
-          </a>
+        <div className="bg-white/10 rounded-2xl shadow-xl p-4 w-full max-w-xl mx-auto col-span-2 row-span-2 shiny-gradient">
+          <h2 className="text-2xl text-white font-bold mb-4 text-center">
+            Socials
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            {socials.map((social, index) => (
+              <a
+                key={index}
+                href={social.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-2 p-3 bg-white/10 rounded-xl hover:bg-white/20 border border-white/20"
+              >
+                <div className="p-2 rounded-xl bg-white/10 group-hover:bg-white/20">
+                  {social.icon}
+                </div>
+                <span className="text-white text-sm">{social.label}</span>
+              </a>
+            ))}
+          </div>
         </div>
-      </div>
 
-      <div
-        className={`moving-border backdrop-blur-lg ${
-          !isMobile ? "row-span-2" : ""
-        } bg-white/10 rounded-2xl shadow-xl p-4 flex flex-col shiny-gradient hover:bg-white/15 transition-all duration-300`}
-      >
-        <div className="flex-1 flex items-center justify-center p-4">
-          <div className="text-center space-y-4">
-            <div className="text-white/90 italic">
+        <div className="bg-white/10 rounded-2xl shadow-xl p-4 w-full col-span-2 row-span-2 shiny-gradient">
+          <Skills />
+        </div>
+
+        <div className="bg-white/10 h-50 md:h-80 rounded-2xl shadow-xl p-4 sm:ml-3 col-span-1 flex items-center justify-center text-center shiny-gradient">
+          <div>
+            <p className="text-white italic text-sm">
               "{quotes[currentQuote].text}"
-            </div>
-            <div className="text-white/70 text-sm">
-              - {quotes[currentQuote].source}
-              <span className="text-white/50 text-xs ml-2">
-                ({quotes[currentQuote].anime})
-              </span>
-            </div>
+            </p>
+            <p className="text-white/70 text-xs">
+              - {quotes[currentQuote].source} ({quotes[currentQuote].anime})
+            </p>
           </div>
         </div>
       </div>
-
-      <div
-        className={`flex justify-center items-center${
-          isMobile ? " hidden" : ""
-        }`}
-      >
-        {" "}
-        <div
-          className={`moving-border flex backdrop-blur-lg ${
-            !isMobile ? "" : ""
-          } bg-white/10 rounded-2xl shadow-xl overflow-hidden min-h-[full] shiny-gradient hover:bg-white/15 transition-all duration-300 sm:block`}
-        >
-          <img
-            src={logo}
-            className="object-cover w-full h-full border-2 border-gray-600 rounded-2xl hover:scale-105 transition-transform duration-500"
-            alt="Profile"
-          />
-        </div>
-      </div>
-    </div>
+      <Projects />
+    </>
   );
 };
 

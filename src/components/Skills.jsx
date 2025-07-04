@@ -51,11 +51,11 @@ const Skills = () => {
   ];
 
   return (
-    <div className="h-full p-4 flex flex-col">
+    <div className="h-full p-1 flex flex-col">
       <h2 className="text-2xl text-center text-white font-bold bg-gray-950 border-[0.5px] border-white/20 rounded-xl py-2 px-4 shadow-lg mb-4">
         Skills
       </h2>
-      <div className="grid grid-cols-2 items-center gap-2 text-sm flex-1 ">
+      <div className="grid grid-cols-4 items-center gap-2 text-sm  ">
         {skills.map((skill) => (
           <div
             key={skill.id}
@@ -65,6 +65,9 @@ const Skills = () => {
             <span className="text-white/80 font-medium">{skill.text}</span>
           </div>
         ))}
+      </div>
+      <div className=" h-full text-white/80 font-bold flex mt-4  gap-2 p-2 rounded-lg bg-white/10 border border-white/10 transition-all duration-300">
+        Learning more stuff gradually...
       </div>
     </div>
   );
