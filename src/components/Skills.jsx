@@ -24,8 +24,22 @@ import {
 } from "react-icons/tb";
 
 const Skills = () => {
+  // Custom Zustand SVG icon
+  const ZustandIcon = () => (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className="text-white"
+    >
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+    </svg>
+  );
+
   const skills = [
     { id: 1, icon: <RiReactjsLine />, text: "ReactJs" },
+    { id: 2, icon: <ZustandIcon />, text: "Zustand" },
     { id: 3, icon: <DiJavascript />, text: "JS" },
     { id: 5, icon: <RiTailwindCssFill />, text: "Tailwind" },
     { id: 6, icon: <SiShadcnui />, text: "shadcn" },

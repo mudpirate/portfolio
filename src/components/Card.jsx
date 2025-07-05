@@ -23,7 +23,7 @@ const Card = () => {
       img: image2,
       title: "Gaming Console Renting app",
       git: "https://github.com/example/honda-civic",
-      link: "https://honda-civic-demo.com",
+      link: "https://gaming-rental.vercel.app",
       description: `🎮 Gaming Console Renting Platform built with the MERN stack and Tailwind CSS.
 Features include user authentication, booking system, admin dashboard, and real-time availability checks.
 Designed with a modern UI, owner analytics, and game listings with detailed specs.`,
@@ -33,7 +33,7 @@ Designed with a modern UI, owner analytics, and game listings with detailed spec
       img: image3,
       title: "My Portfolio Website",
       git: "https://github.com/mudpirate/portfolio",
-      link: "https://ford-focus-demo.com",
+      link: "https://portfolio-tmmd.vercel.app",
       description: `🌐 Personal Portfolio Website built with modern web technologies to showcase projects and skills.
 Features sections like About, Projects, Contact, and smooth navigation with a responsive, clean UI.
 Hosted on Vercel for fast performance and designed to reflect a professional developer profile.`,
