@@ -110,7 +110,7 @@ const Bento = ({ isMobile }) => {
   }, []);
 
   const gridClassName =
-    "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-2 p-4 sm:p-6 max-w-full min-h-screen";
+    "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 xl:grid-cols-6 gap-2 p-4 sm:p-6 max-w-full min-h-screen";
 
   return (
     <>
@@ -136,7 +136,7 @@ const Bento = ({ isMobile }) => {
         </div>
 
         <div className="bg-white/10 rounded-2xl shadow-xl p-4 w-full max-w-xl mx-auto col-span-2 shiny-gradient xl:col-span-2 xl:row-span-1">
-          <h1 className="text-xl sm:text-2xl text-white font-bold mb-4 text-center">
+          <h1 className="text-2xl text-center text-white font-bold bg-gray-950 border border-white/20 rounded-xl py-2 px-4 shadow-lg mb-4">
             About Me
           </h1>
           <p className="text-white text-sm sm:text-base">
@@ -150,7 +150,7 @@ const Bento = ({ isMobile }) => {
         </div>
 
         <div className="bg-white/10 rounded-2xl shadow-xl p-4 w-full max-w-xl mx-auto col-span-2 shiny-gradient xl:col-span-2 xl:row-span-1">
-          <h2 className="text-xl text-white font-bold mb-3 text-center">
+          <h2 className="text-2xl text-center text-white font-bold bg-gray-950 border border-white/20 rounded-xl py-2 px-4 shadow-lg mb-4">
             Contact Me
           </h2>
           <form
@@ -180,10 +180,10 @@ const Bento = ({ isMobile }) => {
         </div>
 
         <div className="bg-white/10 rounded-2xl shadow-xl p-4 w-full max-w-xl mx-auto col-span-2 row-span-2 shiny-gradient xl:col-span-2 xl:row-span-2">
-          <h2 className="text-2xl text-white font-bold mb-4 text-center">
+          <h2 className="text-2xl text-center text-white font-bold bg-gray-950 border border-white/20 rounded-xl py-2 px-4 shadow-lg mb-4">
             Socials
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-2 gap-3 xl:mt-10">
             {socials.map((social, index) => (
               <a
                 key={index}
