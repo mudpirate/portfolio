@@ -183,7 +183,7 @@ const Bento = ({ isMobile }) => {
           <h2 className="text-2xl text-center text-white font-bold bg-gray-950 border border-white/20 rounded-xl py-2 px-4 shadow-lg mb-4">
             Socials
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-2 gap-3 xl:mt-10">
+          <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-2 gap-3 xl:mt-35">
             {socials.map((social, index) => (
               <a
                 key={index}
