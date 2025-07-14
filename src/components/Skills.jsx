@@ -58,7 +58,7 @@ const Skills = () => {
 
   return (
     <div className="h-full p-2 flex flex-col">
-      <h2 className="text-2xl text-center text-white font-bold bg-gray-950 border border-white/20 rounded-xl py-2 px-4 shadow-lg mb-4">
+      <h2 className="text-2xl text-center text-white font-bold xl:mt-24 bg-gray-950 border border-white/20 rounded-xl py-2 px-4 shadow-lg mb-4">
         Skills
       </h2>
 
