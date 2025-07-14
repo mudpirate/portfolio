@@ -110,7 +110,7 @@ const Bento = ({ isMobile }) => {
   }, []);
 
   const gridClassName =
-    "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 p-4 sm:p-6 max-w-full min-h-screen";
+    "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2 p-4 sm:p-6 max-w-full min-h-screen";
 
   return (
     <>
@@ -127,7 +127,7 @@ const Bento = ({ isMobile }) => {
             </p>
           </div>
         )}
-        <div className="hidden lg:block w-full max-w-xs mx-auto">
+        <div className="hidden lg:flex  h-full w-full  ">
           <img
             src={logo}
             className="object-cover w-full h-auto border-2 border-gray-600 rounded-2xl hover:scale-105 transition-transform duration-500"
@@ -205,7 +205,7 @@ const Bento = ({ isMobile }) => {
           <Skills />
         </div>
 
-        <div className="bg-white/10 h-50 md:h-80 rounded-2xl ml-2 w-full shadow-xl p-4  col-span-1 flex items-center justify-center text-center shiny-gradient">
+        <div className="bg-white/10 h-50 md:h-90 rounded-2xl w-full shadow-xl p-4  flex items-center justify-center text-center shiny-gradient">
           <div>
             <p className="text-white italic text-sm">
               "{quotes[currentQuote].text}"
