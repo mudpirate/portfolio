@@ -116,7 +116,7 @@ const Bento = ({ isMobile }) => {
     <>
       <div className={gridClassName}>
         {isMobile && (
-          <div className="flex items-center  w-[88vw] justify-center">
+          <div className="flex items-center ml-[2px] w-[88vw] justify-center">
             <div className="block md:hidden bg-white/10 border-1 border-gray-300  w-full  shiny-gradient items-center backdrop-blur-lg  p-4 rounded-2xl gap-3 xl:col-span-2">
               <img
                 src={logo}
