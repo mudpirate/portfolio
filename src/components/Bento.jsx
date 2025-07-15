@@ -124,7 +124,7 @@ const Bento = ({ isMobile }) => {
                 alt="Profile"
               />
               <p className="text-white text-lg font-semibold text-center">
-                Hi, This is mudpirate here. Welcome to my portfolio website.
+                Hi, This is Nomesh here. Welcome to my portfolio website.
               </p>
             </div>
           </div>
@@ -142,12 +142,12 @@ const Bento = ({ isMobile }) => {
             About Me
           </h1>
           <p className="text-white text-sm sm:text-base">
-            Hi, I'm Mud Pirate (Nomesh) — a passionate and fast-learning
-            full-stack developer currently pursuing a B.Tech in Information
-            Technology at the University of Kalyani, West Bengal. As a
-            sophomore, I've already immersed myself in the world of web
-            development. I'm most comfortable working with technologies like
-            React, Express, Tailwind CSS, and shadcn/ui.
+            Hi, I'm Nomesh — a passionate and fast-learning full-stack developer
+            currently pursuing a B.Tech in Information Technology at the
+            University of Kalyani, West Bengal. As a sophomore, I've already
+            immersed myself in the world of web development and mobile app
+            development I'm most comfortable working with technologies like
+            React, Express, Tailwind CSS, Typescript , React native.
           </p>
         </div>
 
