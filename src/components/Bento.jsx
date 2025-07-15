@@ -110,7 +110,7 @@ const Bento = ({ isMobile }) => {
   }, []);
 
   const gridClassName =
-    "grid grid-cols-1 mt-20 sm:mt-1 sm:grid-cols-2 lg:grid-cols-5 xl:grid-cols-6 gap-2 p-4 sm:p-6 max-w-full min-h-screen";
+    "grid grid-cols-1 mt-10 sm:mt-1 sm:grid-cols-2 lg:grid-cols-5 xl:grid-cols-6 gap-1 p-4 sm:p-6 max-w-full min-h-screen";
 
   return (
     <>
@@ -137,7 +137,7 @@ const Bento = ({ isMobile }) => {
           />
         </div>
 
-        <div className="bg-white/10 border-1 border-gray-300 rounded-2xl shadow-xl p-4 w-full max-w-xl mx-auto col-span-2 shiny-gradient xl:col-span-2 xl:row-span-1">
+        <div className="bg-white/15 border-1 border-gray-300 rounded-2xl shadow-xl p-4 w-full max-w-xl mx-auto col-span-2 shiny-gradient xl:col-span-2 xl:row-span-1">
           <h1 className="text-2xl text-center text-white font-bold bg-gray-950 border border-white/40 rounded-xl py-2 px-4 shadow-lg mb-4">
             About Me
           </h1>
