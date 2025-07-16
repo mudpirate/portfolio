@@ -41,25 +41,24 @@ const Car = ({ cars }) => {
             <h3 className="text-lg md:text-2xl font-bold text-white mb-2 drop-shadow-lg text-center md:text-left">
               {car.title}
             </h3>
-            <p className="text-white/90 mb-4 text-sm md:text-base leading-relaxed text-center md:text-left">
+            <p className="text-white/90 mb-2 text-sm md:text-base leading-relaxed text-center md:text-left">
               {car.description}
             </p>
-            <div className="flex flex-wrap items-center gap-2 mb-4 justify-center md:justify-start">
-              <span className="bg-white/30 px-2 py-1 rounded text-xs text-white font-semibold flex items-center gap-1">
-                <RiReactjsLine className="text-cyan-500" /> React
-              </span>
-              <span className="bg-white/30 px-2 py-1 rounded text-xs text-white font-semibold flex items-center gap-1">
-                <SiExpress className="text-white" /> Express
-              </span>
-              <span className="bg-white/30 px-2 py-1 rounded text-xs text-white font-semibold flex items-center gap-1">
-                <SiMongodb className="text-green-700" /> MongoDB
-              </span>
-              <span className="bg-white/30 px-2 py-1 rounded text-xs text-white font-semibold flex items-center gap-1">
-                <SiShadcnui className="text-purple-700" /> ShadcnUI
-              </span>
-              <span className="bg-white/30 px-2 py-1 rounded text-xs text-white font-semibold flex items-center gap-1">
-                <RiTailwindCssFill className="text-sky-400" /> Tailwind
-              </span>
+            <div>
+              <p className=" w-26 font-bold rounded-2xl p-2 mb-4 border-2 border-white bg-black text-white md:text-sm shadow">
+                Technologies
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2 mb-4 justify-center md:justify-start">
+              {car.tech &&
+                car.tech.map((tech, idx) => (
+                  <span
+                    key={idx}
+                    className="px-3 py-2 rounded-2xl border-1 border-white bg-white/10 text-white text-xs md:text-sm font-medium shadow"
+                  >
+                    {tech}
+                  </span>
+                ))}
             </div>
             <div className="flex flex-wrap gap-3 md:gap-4 mt-auto justify-center md:justify-start">
               <a
