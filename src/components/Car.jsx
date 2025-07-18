@@ -45,8 +45,16 @@ const Car = ({ cars }) => {
               {car.description}
             </p>
             <div>
-              <p className=" w-26 font-bold rounded-2xl p-2 mb-4 border-2 border-white bg-black text-white md:text-sm shadow">
-                Technologies
+              <p
+                className="
+                  font-bold rounded-2xl p-2 mb-4 border-1 border-gray-300  bg-black text-white
+                  text-xs sm:text-sm md:text-base lg:text-lg
+                  w-11/12 sm:w-3/4  lg:w-2/9 xl:w-2/5
+                  mx-auto md:mx-0
+                  shadow text-center md:text-left
+                "
+              >
+                Technologies Used
               </p>
             </div>
             <div className="flex flex-wrap gap-2 mb-4 justify-center md:justify-start">
@@ -54,7 +62,12 @@ const Car = ({ cars }) => {
                 car.tech.map((tech, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-2 rounded-2xl border-1 border-white bg-white/10 text-white text-xs md:text-sm font-medium shadow"
+                    className="
+                      px-2 py-1 rounded-full border-1 border-gray-300 text-white
+                      text-xs sm:text-sm md:text-base
+                      font-medium shadow transition-transform duration-150
+                      hover:scale-105 hover:bg-cyan-600/40
+                    "
                   >
                     {tech}
                   </span>

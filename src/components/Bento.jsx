@@ -129,7 +129,7 @@ const Bento = ({ isMobile }) => {
             </div>
           </div>
         )}
-        <div className="hidden lg:flex bg-white/10 border-1 border-gray-300 rounded-2xl h-full w-full xl:col-span-2 xl:row-span-2">
+        <div className="hidden lg:flex bg-white/10 border-1  border-gray-300 rounded-2xl h-full w-full xl:col-span-2 xl:ml-5 xl:h-100 xl:w-140 xl:row-span-1">
           <img
             src={logo}
             className="object-cover w-full h-auto border-2 border-gray-600 rounded-2xl hover:scale-105 transition-transform duration-500"
@@ -137,11 +137,11 @@ const Bento = ({ isMobile }) => {
           />
         </div>
 
-        <div className="bg-white/15 border-1 border-gray-300 rounded-2xl shadow-xl p-4 w-full max-w-xl mx-auto col-span-2 shiny-gradient xl:col-span-2 xl:row-span-1">
+        <div className="bg-white/15 border-1 border-gray-300 rounded-2xl shadow-xl p-4 w-full  col-span-2 shiny-gradient xl:col-span-2 xl:row-span-1">
           <h1 className="text-2xl text-center text-white font-bold bg-gray-950 border border-white/40 rounded-xl py-2 px-4 shadow-lg mb-4">
             About Me
           </h1>
-          <p className="text-white text-sm sm:text-base">
+          <p className="text-white text-sm xl:text-2xl italic  xl:font-semibold sm:text-base">
             Hi, I'm Nomesh — a passionate and fast-learning full-stack developer
             currently pursuing a B.Tech in Information Technology at the
             University of Kalyani, West Bengal. As a sophomore, I've already
@@ -181,7 +181,7 @@ const Bento = ({ isMobile }) => {
           </form>
         </div>
 
-        <div className="bg-white/10 border-1 border-gray-300 rounded-2xl shadow-xl p-2  w-full max-w-xl mx-auto col-span-2 row-span-2 shiny-gradient xl:col-span-2 xl:row-span-2">
+        <div className="bg-white/10 border-1 xl:ml-3 xl:mt-3    border-gray-300 rounded-2xl shadow-xl p-2  w-full max-w-xl mx-auto col-span-2 row-span-2 shiny-gradient xl:col-span-2 xl:row-span-2">
           <h2 className="text-2xl text-center  text-white font-bold bg-gray-950 border border-white/30 rounded-xl py-2 px-4 shadow-lg mb-4">
             Socials
           </h2>
@@ -203,13 +203,13 @@ const Bento = ({ isMobile }) => {
           </div>
         </div>
 
-        <div className="bg-white/10 border-1 border-gray-300  rounded-2xl shadow-xl p-4 w-full col-span-2 row-span-2 shiny-gradient xl:col-span-2 xl:row-span-2">
+        <div className="bg-white/10 border-1  xl:mt-3  9 border-gray-300  rounded-2xl shadow-xl p-4 w-full col-span-2 row-span-2 shiny-gradient xl:col-span-2 xl:row-span-2">
           <Skills />
         </div>
 
-        <div className="bg-white/10 border-1 border-gray-300  h-50 md:h-90 rounded-2xl w-full shadow-xl p-4  flex items-center justify-center text-center shiny-gradient xl:col-span-2 xl:row-span-1">
+        <div className="bg-white/10 border-1 border-gray-300  h-50 md:h-90 rounded-2xl w-full shadow-xl p-4  flex items-center justify-center text-center shiny-gradient xl:col-span-2 xl:ml-3   xl:w-[31vw] xl:mt-3 xl:h-[26vw] xl:row-span-1">
           <div>
-            <p className="text-white italic text-sm">
+            <p className="text-white italic xl:text-lg text-sm">
               "{quotes[currentQuote].text}"
             </p>
             <p className="text-white/70 text-xs">
