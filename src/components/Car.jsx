@@ -49,7 +49,7 @@ const Car = ({ cars }) => {
                 className="
                   font-bold rounded-2xl p-2 mb-4 border-1 border-gray-300  bg-black text-white
                   text-xs sm:text-sm md:text-base lg:text-lg
-                  w-11/12 sm:w-3/4  lg:w-2/9 xl:w-2/8
+                  w-11/12 sm:w-3/4  lg:w-2/9 xl:w-2/11
                   mx-auto md:mx-0
                   shadow text-center md:text-left
                 "
