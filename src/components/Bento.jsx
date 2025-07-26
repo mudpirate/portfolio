@@ -110,7 +110,7 @@ const Bento = ({ isMobile }) => {
   }, []);
 
   const gridClassName =
-    "grid grid-cols-1 mt-10 sm:mt-1 sm:grid-cols-2 lg:grid-cols-5 xl:grid-cols-6 gap-1 p-4 sm:p-6 max-w-full min-h-screen";
+    "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 xl:grid-cols-6 gap-4 px-4 py-10 sm:px-6 lg:px-12 min-h-screen";
 
   return (
     <>
@@ -129,14 +129,13 @@ const Bento = ({ isMobile }) => {
             </div>
           </div>
         )}
-        <div className="hidden lg:flex bg-white/10 border-1  border-gray-300 rounded-2xl h-full w-full xl:col-span-2 xl:ml-5 xl:h-100 xl:w-140 xl:row-span-1">
+        <div className="hidden lg:flex bg-white/10 border border-gray-300 rounded-2xl xl:col-span-2 xl:h-full items-center justify-center">
           <img
             src={logo}
-            className="object-cover w-full h-auto border-2 border-gray-600 rounded-2xl hover:scale-105 transition-transform duration-500"
+            className="object-cover h-full border-2 border-gray-600 rounded-2xl hover:scale-105 transition-transform duration-500"
             alt="Profile"
           />
         </div>
-
         <div className="bg-white/15 border-1 border-gray-300 rounded-2xl shadow-xl p-4 w-full  col-span-2 shiny-gradient xl:col-span-2 xl:row-span-1">
           <h1 className="text-2xl text-center text-white font-bold bg-gray-950 border border-white/40 rounded-xl py-2 px-4 shadow-lg mb-4">
             About Me
@@ -181,7 +180,7 @@ const Bento = ({ isMobile }) => {
           </form>
         </div>
 
-        <div className="bg-white/10 border-1 xl:ml-3 xl:mt-3    border-gray-300 rounded-2xl shadow-xl p-2  w-full max-w-xl mx-auto col-span-2 row-span-2 shiny-gradient xl:col-span-2 xl:row-span-2">
+        <div className="bg-white/10 border border-gray-300 rounded-2xl shadow-xl p-4 w-full col-span-2 row-span-2 min-h-[26rem] shiny-gradient xl:col-span-2 xl:row-span-2">
           <h2 className="text-2xl text-center  text-white font-bold bg-gray-950 border border-white/30 rounded-xl py-2 px-4 shadow-lg mb-4">
             Socials
           </h2>
@@ -203,11 +202,10 @@ const Bento = ({ isMobile }) => {
           </div>
         </div>
 
-        <div className="bg-white/10 border-1  xl:mt-3  9 border-gray-300  rounded-2xl shadow-xl p-4 w-full col-span-2 row-span-2 shiny-gradient xl:col-span-2 xl:row-span-2">
+        <div className="bg-white/10 border border-gray-300 rounded-2xl shadow-xl p-4 w-full col-span-2 row-span-2 min-h-[26rem] shiny-gradient xl:col-span-2 xl:row-span-2">
           <Skills />
         </div>
-
-        <div className="bg-white/10 border-1 border-gray-300  h-50 md:h-90 rounded-2xl w-full shadow-xl p-4  flex items-center justify-center text-center shiny-gradient xl:col-span-2 xl:ml-3   xl:w-[31vw] xl:mt-3 xl:h-[26vw] xl:row-span-1">
+        <div className="bg-white/10 border border-gray-300 rounded-2xl shadow-xl p-4 w-full col-span-2 min-h-[26rem] flex items-center justify-center text-center shiny-gradient xl:col-span-2 xl:row-span-2">
           <div>
             <p className="text-white italic xl:text-lg text-sm">
               "{quotes[currentQuote].text}"
