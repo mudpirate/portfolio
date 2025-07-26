@@ -58,9 +58,11 @@ const Skills = () => {
 
   return (
     <div className="h-full flex flex-col">
-      <h2 className="text-2xl text-center text-white font-bold  bg-gray-950 border border-white/30 rounded-xl py-2 px-4 shadow-lg mb-4">
-        Skills
-      </h2>
+      <div className="flex justify-center mb-4">
+        <h1 className="text-2xl text-center w-70 text-white font-bold bg-gray-950 border-[0.5px] border-white/30 rounded-xl py-2 px-4 shadow-lg mb-2">
+          Skills
+        </h1>
+      </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-sm xl:grid-cols-3 xl:mt-10">
         {skills.map((skill) => (

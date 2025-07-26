@@ -104,10 +104,12 @@ const Bento = ({ isMobile }) => {
         />
       </div>
 
-      <div className="bg-white/10 text-white p-4 rounded-lg shadow border-2 border-white/40 shiny-gradient">
-        <h1 className="text-2xl text-center text-white font-bold  bg-gray-950 border border-white/30 rounded-xl py-2 px-4 shadow-lg mb-4">
-          About Me
-        </h1>
+      <div className="bg-white/10 text-white  p-4 rounded-lg shadow border-2 border-white/40 shiny-gradient">
+        <div className="flex justify-center mb-4">
+          <h1 className="text-2xl text-center w-70 text-white font-bold bg-gray-950 border-[0.5px] border-white/30 rounded-xl py-2 px-4 shadow-lg mb-2">
+            About Me
+          </h1>
+        </div>
         <p>
           Hi, I'm Nomesh — a passionate and fast-learning full-stack developer
           currently pursuing B.Tech in Information Technology. I love working
@@ -116,9 +118,12 @@ const Bento = ({ isMobile }) => {
       </div>
 
       <div className="bg-white/10 text-white p-4 rounded-lg border-2 border-white/40 shiny-gradient shadow">
-        <h2 className="text-2xl text-center text-white font-bold  bg-gray-950 border border-white/30 rounded-xl py-2 px-4 shadow-lg mb-4">
-          Contact Me
-        </h2>
+        <div className="flex justify-center mb-4">
+          <h1 className="text-2xl text-center w-70 text-white font-bold bg-gray-950 border-[0.5px] border-white/30 rounded-xl py-2 px-4 shadow-lg mb-2">
+            Contact Me
+          </h1>
+        </div>
+
         <form
           action="https://formspree.io/f/xldnpykv"
           method="post"
@@ -146,9 +151,11 @@ const Bento = ({ isMobile }) => {
       </div>
 
       <div className="bg-white/10 text-white p-4 rounded-lg border-2 border-white/40 shiny-gradient shadow">
-        <h2 className="text-2xl text-center text-white font-bold  bg-gray-950 border border-white/30 rounded-xl py-2 px-4 shadow-lg mb-4">
-          Socials
-        </h2>
+        <div className="flex justify-center mb-4">
+          <h1 className="text-2xl text-center w-70 text-white font-bold bg-gray-950 border-[0.5px] border-white/30 rounded-xl py-2 px-4 shadow-lg mb-2">
+            Socials
+          </h1>
+        </div>
         <div className="flex flex-wrap justify-center gap-4">
           {socials.map((social, index) => (
             <a
