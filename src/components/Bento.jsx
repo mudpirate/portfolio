@@ -142,11 +142,11 @@ const Bento = ({ isMobile }) => {
           </h1>
           <p className="text-white text-sm xl:text-2xl italic  xl:font-semibold sm:text-base">
             Hi, I'm Nomesh — a passionate and fast-learning full-stack developer
-            currently pursuing a B.Tech in Information Technology at the
-            University of Kalyani, West Bengal. As a sophomore, I've already
-            immersed myself in the world of web development and mobile app
-            development I'm most comfortable working with technologies like
-            React, Express, Tailwind CSS, Typescript , React native.
+            currently pursuing B.Tech in Information Technology. As a
+            sophomore,I've already immersed myself in the world of web
+            development and mobile app development I'm most comfortable working
+            with technologies like React, Express, Tailwind CSS, Typescript ,
+            React native.
           </p>
         </div>
 
