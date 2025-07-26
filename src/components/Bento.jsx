@@ -110,7 +110,7 @@ const Bento = ({ isMobile }) => {
   }, []);
 
   const gridClassName =
-    "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 xl:grid-cols-6 gap-4 px-4 py-10 sm:px-6 lg:px-12 min-h-screen";
+    "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4 px-4 py-10 sm:px-6 lg:px-12 min-h-screen";
 
   return (
     <>
