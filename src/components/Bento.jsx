@@ -1,46 +1,37 @@
 import React, { useState, useEffect } from "react";
 import logo from "../assets/profile.jpg";
 import Skills from "./Skills";
+import Projects from "./Projects";
 import {
   FaDiscord,
   FaTwitter,
   FaLinkedinIn,
   FaFacebookF,
   FaInstagram,
-  FaSnapchatGhost,
   FaGithub,
 } from "react-icons/fa";
-import Projects from "./Projects";
 
 const Bento = ({ isMobile }) => {
   const socials = [
     {
-      icon: <FaGithub className="text-2xl sm:text-3xl" />,
+      icon: <FaGithub />,
       label: "GitHub",
       link: "https://github.com/mudpirate",
     },
     {
-      icon: <FaLinkedinIn className="text-2xl sm:text-3xl" />,
+      icon: <FaLinkedinIn />,
       label: "LinkedIn",
       link: "https://www.linkedin.com/in/nomesh-singh-121510328/",
     },
     {
-      icon: <FaTwitter className="text-2xl sm:text-3xl" />,
+      icon: <FaTwitter />,
       label: "Twitter",
       link: "https://x.com/mud_pirate__",
     },
+    { icon: <FaDiscord />, label: "Discord", link: "https://discord.com/" },
+    { icon: <FaFacebookF />, label: "Facebook", link: "https://facebook.com/" },
     {
-      icon: <FaDiscord className="text-2xl sm:text-3xl" />,
-      label: "Discord",
-      link: "https://discord.com/",
-    },
-    {
-      icon: <FaFacebookF className="text-2xl sm:text-3xl" />,
-      label: "Facebook",
-      link: "https://facebook.com/",
-    },
-    {
-      icon: <FaInstagram className="text-2xl sm:text-3xl" />,
+      icon: <FaInstagram />,
       label: "Instagram",
       link: "https://instagram.com/",
     },
@@ -68,22 +59,17 @@ const Bento = ({ isMobile }) => {
       anime: "Fullmetal Alchemist: Brotherhood",
     },
     {
-      text: "A person grows up when he's able to overcome hardships. Protection is important, but there are some things a person must learn on his own.",
+      text: "A person grows up when he's able to overcome hardships...",
       source: "Jiraiya",
       anime: "Naruto",
     },
     {
-      text: "Power comes in response to a need, not a desire. You have to create that need.",
+      text: "Power comes in response to a need, not a desire.",
       source: "Goku",
       anime: "Dragon Ball Z",
     },
     {
-      text: "In our society, letting others find out that you're a nice guy is a very risky move. It's extremely likely that someone would take advantage of that.",
-      source: "Hitagi Senjougahara",
-      anime: "Monogatari Series",
-    },
-    {
-      text: "Fear is not evil. It tells you what your weakness is. And once you know your weakness, you can become stronger as well as kinder.",
+      text: "Fear is not evil. It tells you what your weakness is.",
       source: "Gildarts Clive",
       anime: "Fairy Tail",
     },
@@ -93,7 +79,7 @@ const Bento = ({ isMobile }) => {
       anime: "Naruto Shippuden",
     },
     {
-      text: "You should enjoy the little detours. Because that's where you'll find the things more important than what you want.",
+      text: "You should enjoy the little detours...",
       source: "Ging Freecss",
       anime: "Hunter x Hunter",
     },
@@ -105,119 +91,93 @@ const Bento = ({ isMobile }) => {
     const timer = setInterval(() => {
       setCurrentQuote((prev) => (prev + 1) % quotes.length);
     }, 3000);
-
     return () => clearInterval(timer);
   }, []);
 
-  const gridClassName =
-    "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4 px-4 py-10 sm:px-6 lg:px-12 min-h-screen";
-
   return (
-    <>
-      <div className={gridClassName}>
-        {isMobile && (
-          <div className="flex items-center ml-[2px] w-[88vw] justify-center">
-            <div className="block md:hidden bg-white/10 border-1 border-gray-300  w-full  shiny-gradient items-center backdrop-blur-lg  p-4 rounded-2xl gap-3 xl:col-span-2">
-              <img
-                src={logo}
-                className="object-cover w-20 h-20 mx-auto border-2 border-gray-600 rounded-full mb-2"
-                alt="Profile"
-              />
-              <p className="text-white text-lg font-semibold text-center">
-                Hi, This is Nomesh here. Welcome to my portfolio website.
-              </p>
-            </div>
-          </div>
-        )}
-        <div className="hidden lg:flex bg-white/10 border border-gray-300 rounded-2xl xl:col-span-2 xl:h-full items-center justify-center">
-          <img
-            src={logo}
-            className="object-cover h-full border-2 border-gray-600 rounded-2xl hover:scale-105 transition-transform duration-500"
-            alt="Profile"
+    <div className="flex flex-col gap-8 p-4 max-w-5xl mx-auto">
+      <div className="flex justify-center">
+        <img
+          src={logo}
+          alt="Profile"
+          className="w-32 h-32 rounded-full border-2 border-gray-500"
+        />
+      </div>
+
+      <div className="bg-white/10 text-white p-4 rounded-lg shadow border-2 border-white/40 shiny-gradient">
+        <h1 className="text-2xl text-center text-white font-bold  bg-gray-950 border border-white/30 rounded-xl py-2 px-4 shadow-lg mb-4">
+          About Me
+        </h1>
+        <p>
+          Hi, I'm Nomesh — a passionate and fast-learning full-stack developer
+          currently pursuing B.Tech in Information Technology. I love working
+          with React, Express, Tailwind CSS, Typescript, and React Native.
+        </p>
+      </div>
+
+      <div className="bg-white/10 text-white p-4 rounded-lg border-2 border-white/40 shiny-gradient shadow">
+        <h2 className="text-2xl text-center text-white font-bold  bg-gray-950 border border-white/30 rounded-xl py-2 px-4 shadow-lg mb-4">
+          Contact Me
+        </h2>
+        <form
+          action="https://formspree.io/f/xldnpykv"
+          method="post"
+          className="flex flex-col gap-4"
+        >
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            className="p-2 rounded bg-white/20 placeholder-white/70 focus:outline-none"
           />
-        </div>
-        <div className="bg-white/15 border-1 border-gray-300 rounded-2xl shadow-xl p-4 w-full  col-span-2 shiny-gradient xl:col-span-2 xl:row-span-1">
-          <h1 className="text-2xl text-center text-white font-bold bg-gray-950 border border-white/40 rounded-xl py-2 px-4 shadow-lg mb-4">
-            About Me
-          </h1>
-          <p className="text-white text-sm xl:text-2xl italic  xl:font-semibold sm:text-base">
-            Hi, I'm Nomesh — a passionate and fast-learning full-stack developer
-            currently pursuing B.Tech in Information Technology. As a
-            sophomore,I've already immersed myself in the world of web
-            development and mobile app development I'm most comfortable working
-            with technologies like React, Express, Tailwind CSS, Typescript ,
-            React native.
-          </p>
-        </div>
-
-        <div className="bg-white/10 border-1 border-gray-300  rounded-2xl shadow-xl p-4 w-full max-w-xl mx-auto col-span-2 shiny-gradient xl:col-span-2 xl:row-span-1">
-          <h2 className="text-2xl text-center text-white font-bold bg-gray-950 border border-white/30 rounded-xl py-2 px-4 shadow-lg mb-4">
-            Contact Me
-          </h2>
-          <form
-            className="space-y-4"
-            action="https://formspree.io/f/xldnpykv"
-            method="post"
+          <textarea
+            name="message"
+            rows="4"
+            placeholder="Your Message"
+            className="p-2 rounded bg-white/20 placeholder-white/70 focus:outline-none"
+          ></textarea>
+          <button
+            type="submit"
+            className="bg-white/20 p-2 rounded hover:bg-white/30 font-semibold"
           >
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              className="w-full bg-white/10 border border-white/20 rounded-lg p-2 text-white placeholder-white/50 focus:outline-none"
-            />
-            <textarea
-              placeholder="Your Message"
-              name="message"
-              rows="3"
-              className="w-full bg-white/10 border border-white/20 rounded-lg p-2 text-white placeholder-white/50 focus:outline-none resize-none"
-            ></textarea>
-            <button
-              type="submit"
-              className="w-full bg-white/20 hover:bg-white/30 text-white font-semibold py-2 px-4 rounded-lg"
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <div className="bg-white/10 text-white p-4 rounded-lg border-2 border-white/40 shiny-gradient shadow">
+        <h2 className="text-2xl text-center text-white font-bold  bg-gray-950 border border-white/30 rounded-xl py-2 px-4 shadow-lg mb-4">
+          Socials
+        </h2>
+        <div className="flex flex-wrap justify-center gap-4">
+          {socials.map((social, index) => (
+            <a
+              key={index}
+              href={social.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center w-20"
             >
-              Send Message
-            </button>
-          </form>
-        </div>
-
-        <div className="bg-white/10 border border-gray-300 rounded-2xl shadow-xl p-4 w-full col-span-2 row-span-2 min-h-[26rem] shiny-gradient xl:col-span-2 xl:row-span-2">
-          <h2 className="text-2xl text-center  text-white font-bold bg-gray-950 border border-white/30 rounded-xl py-2 px-4 shadow-lg mb-4">
-            Socials
-          </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-2 xl:mt-10  gap-3">
-            {socials.map((social, index) => (
-              <a
-                key={index}
-                href={social.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col items-center gap-2 p-3 mt-2 bg-white/20 rounded-xl hover:bg-white/20 border border-white/20"
-              >
-                <div className="p-2 rounded-xl bg-white/10 group-hover:bg-white/20">
-                  {social.icon}
-                </div>
-                <span className="text-white text-sm">{social.label}</span>
-              </a>
-            ))}
-          </div>
-        </div>
-
-        <div className="bg-white/10 border border-gray-300 rounded-2xl shadow-xl p-4 w-full col-span-2 row-span-2 min-h-[26rem] shiny-gradient xl:col-span-2 xl:row-span-2">
-          <Skills />
-        </div>
-        <div className="bg-white/10 border border-gray-300 rounded-2xl shadow-xl p-4 w-full col-span-2 min-h-[26rem] flex items-center justify-center text-center shiny-gradient xl:col-span-2 xl:row-span-2">
-          <div>
-            <p className="text-white italic xl:text-lg text-sm">
-              "{quotes[currentQuote].text}"
-            </p>
-            <p className="text-white/70 text-xs">
-              - {quotes[currentQuote].source} ({quotes[currentQuote].anime})
-            </p>
-          </div>
+              <div className="text-3xl mb-1">{social.icon}</div>
+              <span className="text-sm text-center">{social.label}</span>
+            </a>
+          ))}
         </div>
       </div>
+
+      <div className="bg-white/10 text-white p-4 border-2 border-white/40 shiny-gradient rounded-lg shadow">
+        <Skills />
+      </div>
+
+      <div className="bg-white/10 border-2 border-white/40 shiny-gradient text-white p-4 rounded-lg shadow text-center">
+        <p className="italic">"{quotes[currentQuote].text}"</p>
+        <p className="text-sm text-white/70">
+          - {quotes[currentQuote].source} ({quotes[currentQuote].anime})
+        </p>
+      </div>
+
       <Projects />
-    </>
+    </div>
   );
 };
 

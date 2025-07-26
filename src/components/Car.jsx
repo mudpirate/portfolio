@@ -44,41 +44,32 @@ const Car = ({ cars }) => {
             <p className="text-white/90 mb-2 text-sm md:text-base leading-relaxed text-center md:text-left">
               {car.description}
             </p>
-            <div>
-              <p
-                className="
-                  font-bold rounded-2xl p-2 mb-4 border-1 border-gray-300  bg-black text-white
-                  text-xs sm:text-sm md:text-base lg:text-lg
-                  w-11/12 sm:w-3/4  lg:w-2/9 xl:w-2/11
-                  mx-auto md:mx-0
-                  shadow text-center md:text-left
-                "
-              >
+
+            {/* Technologies Header */}
+            <div className="w-full">
+              <p className="text-white font-semibold text-sm md:text-base bg-black px-4 py-2 rounded-md w-fit mx-auto md:mx-0 mb-2">
                 Technologies Used
               </p>
             </div>
-            <div className="flex flex-wrap gap-2 mb-4 justify-center md:justify-start">
-              {car.tech &&
-                car.tech.map((tech, idx) => (
-                  <span
-                    key={idx}
-                    className="
-                      px-2 py-1 rounded-full border-1 border-gray-300 text-white
-                      text-xs sm:text-sm md:text-base
-                      font-medium shadow transition-transform duration-150
-                      hover:scale-105 hover:bg-cyan-600/40
-                    "
-                  >
-                    {tech}
-                  </span>
-                ))}
+
+            {/* Technologies List */}
+            <div className="flex flex-wrap gap-2 justify-center md:justify-start mb-4">
+              {car.tech?.map((tech, idx) => (
+                <span
+                  key={idx}
+                  className="px-3 py-1 rounded-full border  border-gray-400 text-white text-xs sm:text-sm md:text-base font-medium shadow hover:bg-cyan-600/30 transition-all duration-150"
+                >
+                  {tech}
+                </span>
+              ))}
             </div>
+
+            {/* Links */}
             <div className="flex flex-wrap gap-3 md:gap-4 mt-auto justify-center md:justify-start">
               <a
                 href={car.git}
                 target="_blank"
                 rel="noopener noreferrer"
-                title="GitHub"
                 className="flex items-center gap-2 px-3 md:px-4 py-2 rounded-lg bg-black text-white hover:bg-white/20 transition-all shadow-md hover:scale-105 text-sm md:text-base"
               >
                 <FaGithub className="text-lg md:text-xl" />
@@ -88,7 +79,6 @@ const Car = ({ cars }) => {
                 href={car.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                title="Live Demo"
                 className="flex items-center gap-2 px-3 md:px-4 py-2 rounded-lg bg-white/30 hover:from-cyan-600 hover:to-blue-600 transition-all shadow-md hover:scale-105 text-sm md:text-base"
               >
                 <svg
