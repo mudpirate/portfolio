@@ -117,6 +117,11 @@ const Bento = ({ isMobile }) => {
         </p>
       </div>
 
+      <div className="bg-white/10 text-white p-4 border-2 border-white/40 shiny-gradient rounded-lg shadow">
+        <Skills />
+      </div>
+      <Projects />
+
       <div className="bg-white/10 text-white p-4 rounded-lg border-2 border-white/40 shiny-gradient shadow">
         <div className="flex justify-center mb-4">
           <h1 className="text-2xl text-center w-70 text-white font-bold bg-gray-950 border-[0.5px] border-white/30 rounded-xl py-2 px-4 shadow-lg mb-2">
@@ -172,18 +177,12 @@ const Bento = ({ isMobile }) => {
         </div>
       </div>
 
-      <div className="bg-white/10 text-white p-4 border-2 border-white/40 shiny-gradient rounded-lg shadow">
-        <Skills />
-      </div>
-
       <div className="bg-white/10 border-2 border-white/40 shiny-gradient text-white p-4 rounded-lg shadow text-center">
         <p className="italic">"{quotes[currentQuote].text}"</p>
         <p className="text-sm text-white/70">
           - {quotes[currentQuote].source} ({quotes[currentQuote].anime})
         </p>
       </div>
-
-      <Projects />
     </div>
   );
 };
