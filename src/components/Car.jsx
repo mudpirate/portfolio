@@ -30,7 +30,7 @@ const Car = ({ cars }) => {
       {cars.map((car) => (
         <div
           key={car.id}
-          className="p-4 md:p-6 shadow-xl flex flex-col md:flex-row items-center gap-4 md:gap-6 border border-white/30 w-full"
+          className="p-4 md:p-6  flex flex-col md:flex-row items-center gap-4 md:gap-6  w-full"
         >
           <img
             src={car.img}
