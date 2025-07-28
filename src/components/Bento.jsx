@@ -95,7 +95,7 @@ const Bento = ({ isMobile }) => {
   }, []);
 
   const [displayText, setDisplayText] = useState("");
-  const fullText = "Hoola Amigooooo";
+  const fullText = "Hoola Amigos, Let's turn some black coffee ☕  into code";
 
   useEffect(() => {
     let index = 0;
@@ -107,7 +107,7 @@ const Bento = ({ isMobile }) => {
 
       setDisplayText((prev) => prev + fullText.charAt(index));
       index += 1;
-    }, 150);
+    }, 60);
 
     return () => clearInterval(interval);
   }, []);
@@ -120,10 +120,10 @@ const Bento = ({ isMobile }) => {
           alt="Profile"
           className="w-32 h-32 md:w-48 md:h-48 border-2 rounded-2xl border-gray-500 object-cover"
         />
-        <div className="  md:w-full md:h-50 md:flex md:justify-start md:items-center">
-          <p className="text-3xl sm:text-5xl md:text-6xl md:ml-3 lg:text-7xl font-mono">
+        <div className="  md:w-full md:h-50 md:flex md:justify-center md:items-center">
+          <p className="text-3xl sm:text-5xl md:text-3xl md:ml-3 lg:text-4xl font-semibold ">
             {displayText}
-            <span className="animate-blink">!</span>
+            <span className="animate-blink">💻</span>
           </p>
         </div>
       </div>
@@ -136,8 +136,9 @@ const Bento = ({ isMobile }) => {
         </div>
 
         <ul>
-          <li className="text-lg font-bold">
-            Hi, I'm Nomesh — a curious builder and a full-stack developer.
+          <li className="text-2xl font-bold">
+            Hi, I'm Nomesh — a curious builder and a full-stack developer
+            <span className="animate-blink ml-2">!</span>
           </li>{" "}
           <li className="text-md mt-2 font-semibold">
             I love crafting sleek, high-performance apps using Nextjs, React,
