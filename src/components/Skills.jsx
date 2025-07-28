@@ -77,10 +77,6 @@ const Skills = () => {
           </div>
         ))}
       </div>
-
-      <div className="mt-4 p-2 rounded-lg bg-white/10 border border-white/10 text-white/80 font-bold text-center">
-        Learning more stuff gradually...
-      </div>
     </div>
   );
 };

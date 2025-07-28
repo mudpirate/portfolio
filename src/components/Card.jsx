@@ -14,12 +14,10 @@ const Card = () => {
       title: "The Pitch",
       git: "https://github.com/mudpirate/Football-blog",
       link: "",
-      description: `📝 "The Pitch" is a modern blog platform built for creators and readers. 
-Crafted with performance and simplicity in mind, it features a rich text editor, user authentication, 
-personalized dashboards, and seamless content browsing. 
-Built using the MERN stack with Tailwind CSS, TanStack Query, and ImageKit for optimized media handling.`,
+      description: `The Pitch is a full stack blog platform featuring robust user authentication and authorization, AI-powered blog generation using Gemini AI, a rich text editor for post creation, dynamic filtering and search, personalized user dashboards, and image uploads with optimization via ImageKit. The platform is fully responsive and optimized for performance.`,
       tech: [
         "React",
+        "Gemini AI",
         "TailwindCss",
         "express",
         "Tanstack Query",
@@ -27,6 +25,7 @@ Built using the MERN stack with Tailwind CSS, TanStack Query, and ImageKit for o
         "ImageKit",
         "axios",
         "nodeJs",
+        "Clerk",
         "MongoDB",
       ],
     },
@@ -36,13 +35,12 @@ Built using the MERN stack with Tailwind CSS, TanStack Query, and ImageKit for o
       title: "ConGame",
       git: "https://github.com/mudpirate/Gaming-rental",
       link: "https://gaming-rental.vercel.app",
-      description: `🎮 Gaming Console Renting Platform built with the MERN stack and Tailwind CSS.
-Features include user authentication, booking system, admin dashboard, and real-time availability checks.
-Designed with a modern UI, owner analytics, and game listings with detailed specs.`,
+      description: `🎮 ConGame is a full stack gaming console rental platform built with the MERN stack and Tailwind CSS. It features secure user authentication, a real-time booking system, an admin dashboard for managing consoles and users, and real-time availability checks. The platform includes a modern UI using shadcnUI, owner analytics, and game listings with detailed specifications. `,
       tech: [
         "React",
         "TailwindCss",
         "express",
+        "JWT",
         "shadcnUI",
         "ImageKit",
         "axios",
@@ -56,9 +54,7 @@ Designed with a modern UI, owner analytics, and game listings with detailed spec
       title: "FootLand",
       git: "https://github.com/mudpirate/e-commerce",
       link: "https://e-commerce-one-lyart-97.vercel.app",
-      description: `🛒 E-Commerce built with React, Node.js, Express, and MongoDB.
-        Features product listing, dynamic cart, and secure JWT-based user authentication.
-        Built with a clean UI using Tailwind CSS, and React Router for seamless navigation.`,
+      description: `🛒 A responsive E-Commerce frontend built with React and Tailwind CSS. Features include dynamic product listings, category-based filtering, a functional shopping cart, and smooth page navigation using React Router. Designed for scalability and fast user experience.`,
       tech: ["React", "TailwindCss", "useReducer", "shadcnUI"],
     },
 

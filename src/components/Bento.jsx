@@ -110,10 +110,12 @@ const Bento = ({ isMobile }) => {
             About Me
           </h1>
         </div>
-        <p>
-          Hi, I'm Nomesh — a passionate and fast-learning full-stack developer
-          currently pursuing B.Tech in Information Technology. I love working
-          with React, Express, Tailwind CSS, Typescript, and React Native.
+        <p className="text-md font-semibold">
+          Hi, I'm Nomesh — a curious builder and a full-stack developer, I love
+          crafting sleek, high-performance apps using Nextjs, React, TypeScript,
+          Express, Tailwind CSS, and React Native. Whether it's web or mobile, I
+          enjoy turning ideas into real-world projects that solve problems and
+          look great doing it.
         </p>
       </div>
 

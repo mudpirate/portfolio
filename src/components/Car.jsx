@@ -30,13 +30,15 @@ const Car = ({ cars }) => {
       {cars.map((car) => (
         <div
           key={car.id}
-          className=" py-3 md:p-6  flex  flex-col md:flex-row items-center gap-4 md:gap-6  w-full"
+          className=" py-3 md:p-6  flex flex-col border-1 border-white/30  md:flex-row  items-center gap-4 md:gap-6  w-full"
         >
-          <img
-            src={car.img}
-            alt={car.title}
-            className="w- h-40 md:w-80 md:h-40 border-2 border-white/30 object-fill rounded-xl shadow-lg mb-4 md:mb-0"
-          />
+          <div className="">
+            <img
+              src={car.img}
+              alt={car.title}
+              className="w- h-40 md:w-80 md:h-40 border-2 border-white/30 object-fill rounded-xl shadow-lg mb-4 md:mb-0"
+            />
+          </div>
           <div className="flex-1 flex flex-col justify-between h-full w-full">
             <h3 className="text-lg md:text-2xl font-bold text-white mb-2 drop-shadow-lg text-center md:text-left">
               {car.title}
@@ -57,7 +59,7 @@ const Car = ({ cars }) => {
               {car.tech?.map((tech, idx) => (
                 <span
                   key={idx}
-                  className="px-3 py-1 rounded-full border  border-gray-400 text-white text-xs sm:text-sm md:text-base font-medium shadow hover:bg-cyan-600/30 transition-all duration-150"
+                  className="px-3 py-1 rounded-full border capitalize border-gray-400 text-white text-xs sm:text-sm md:text-base font-medium shadow hover:bg-cyan-600/30 transition-all duration-150"
                 >
                   {tech}
                 </span>
