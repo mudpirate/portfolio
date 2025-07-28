@@ -94,14 +94,38 @@ const Bento = ({ isMobile }) => {
     return () => clearInterval(timer);
   }, []);
 
+  const [displayText, setDisplayText] = useState("");
+  const fullText = "Hoola Amigooooo";
+
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      if (index >= fullText.length) {
+        clearInterval(interval);
+        return;
+      }
+
+      setDisplayText((prev) => prev + fullText.charAt(index));
+      index += 1;
+    }, 150);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="flex flex-col gap-8 p-4 max-w-5xl mx-auto">
-      <div className="flex justify-center">
+      <div className="bg-white/10 text-white p-4 rounded-lg border-2 flex flex-col md:flex-row items-center md:items-start border-white/40 shiny-gradient shadow gap-4">
         <img
           src={logo}
           alt="Profile"
-          className="w-32 h-32 rounded-full border-2 border-gray-500"
+          className="w-32 h-32 md:w-48 md:h-48 border-2 rounded-2xl border-gray-500 object-cover"
         />
+        <div className="  md:w-full md:h-50 md:flex md:justify-start md:items-center">
+          <p className="text-3xl sm:text-5xl md:text-6xl md:ml-3 lg:text-7xl font-mono">
+            {displayText}
+            <span className="animate-blink">!</span>
+          </p>
+        </div>
       </div>
 
       <div className="bg-white/10 text-white  p-4 rounded-lg shadow border-2 border-white/40 shiny-gradient">
@@ -110,13 +134,20 @@ const Bento = ({ isMobile }) => {
             About Me
           </h1>
         </div>
-        <p className="text-md font-semibold">
-          Hi, I'm Nomesh — a curious builder and a full-stack developer, I love
-          crafting sleek, high-performance apps using Nextjs, React, TypeScript,
-          Express, Tailwind CSS, and React Native. Whether it's web or mobile, I
-          enjoy turning ideas into real-world projects that solve problems and
-          look great doing it.
-        </p>
+
+        <ul>
+          <li className="text-lg font-bold">
+            Hi, I'm Nomesh — a curious builder and a full-stack developer.
+          </li>{" "}
+          <li className="text-md mt-2 font-semibold">
+            I love crafting sleek, high-performance apps using Nextjs, React,
+            TypeScript, Express, Tailwind CSS, and React Native.
+          </li>{" "}
+          <li className="text-md mt-2 font-semibold">
+            Whether it's web or mobile, I enjoy turning ideas into real-world
+            projects that solve problems and look great doing it.
+          </li>
+        </ul>
       </div>
 
       <div className="bg-white/10 text-white p-4 border-2 border-white/40 shiny-gradient rounded-lg shadow">

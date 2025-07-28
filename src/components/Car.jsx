@@ -30,7 +30,7 @@ const Car = ({ cars }) => {
       {cars.map((car) => (
         <div
           key={car.id}
-          className=" py-3 md:p-6  flex flex-col border-1 border-white/30  md:flex-row  items-center gap-4 md:gap-6  w-full"
+          className=" py-3 md:p-6  flex flex-col  rounded-xl px-3 md:border-1 border-white/30  md:flex-row  items-center gap-4 md:gap-6  w-full"
         >
           <div className="">
             <img
@@ -59,7 +59,7 @@ const Car = ({ cars }) => {
               {car.tech?.map((tech, idx) => (
                 <span
                   key={idx}
-                  className="px-3 py-1 rounded-full border capitalize border-gray-400 text-white text-xs sm:text-sm md:text-base font-medium shadow hover:bg-cyan-600/30 transition-all duration-150"
+                  className="px-3 py-1 rounded-full border-2 capitalize border-gray-300 text-white text-xs sm:text-sm md:text-base font-medium shadow hover:bg-cyan-600/30 transition-all duration-150"
                 >
                   {tech}
                 </span>

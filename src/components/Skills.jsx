@@ -2,6 +2,8 @@ import { BiLogoPostgresql } from "react-icons/bi";
 import { DiJavascript } from "react-icons/di";
 import { FaGitAlt, FaGithub } from "react-icons/fa6";
 import { IoLogoNodejs } from "react-icons/io5";
+import { FaPython } from "react-icons/fa";
+
 import {
   RiJavaLine,
   RiNextjsLine,
@@ -22,6 +24,7 @@ import {
   TbBrandTypescript,
   TbHexagonLetterC,
 } from "react-icons/tb";
+import { SiRedux } from "react-icons/si";
 
 const Skills = () => {
   // Custom Zustand SVG icon
@@ -38,14 +41,18 @@ const Skills = () => {
   );
 
   const skills = [
+    { id: 8, icon: <RiNextjsLine />, text: "NextJs" },
+
+    { id: 10, icon: <SiExpress />, text: "Express" },
     { id: 1, icon: <RiReactjsLine />, text: "ReactJs" },
     { id: 2, icon: <ZustandIcon />, text: "Zustand" },
     { id: 3, icon: <DiJavascript />, text: "JS" },
     { id: 5, icon: <RiTailwindCssFill />, text: "Tailwind" },
     { id: 6, icon: <SiShadcnui />, text: "shadcn" },
     { id: 7, icon: <TbBrandFramerMotion />, text: "Motion" },
+    { id: 16, icon: <SiRedux />, text: "Redux" },
     { id: 9, icon: <IoLogoNodejs />, text: "NodeJS" },
-    { id: 10, icon: <SiExpress />, text: "Express" },
+
     { id: 14, icon: <FaGitAlt />, text: "Git" },
     { id: 17, icon: <TbHexagonLetterC />, text: "C" },
     { id: 20, icon: <SiVercel />, text: "Vercel" },
@@ -54,6 +61,8 @@ const Skills = () => {
     { id: 4, icon: <TbBrandTypescript />, text: "TS" },
     { id: 18, icon: <TbBrandCpp />, text: "C++" },
     { id: 13, icon: <SiMongodb />, text: "Mongo" },
+    { id: 12, icon: <BiLogoPostgresql />, text: "PostgreSQL" },
+    { id: 19, icon: <FaPython />, text: "Python" },
   ];
 
   return (
