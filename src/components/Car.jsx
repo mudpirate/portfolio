@@ -30,12 +30,12 @@ const Car = ({ cars }) => {
       {cars.map((car) => (
         <div
           key={car.id}
-          className="p-4 md:p-6  flex flex-col md:flex-row items-center gap-4 md:gap-6  w-full"
+          className=" py-3 md:p-6  flex  flex-col md:flex-row items-center gap-4 md:gap-6  w-full"
         >
           <img
             src={car.img}
             alt={car.title}
-            className="w-full h-40 md:w-60 md:h-40 border-2 border-white/30 object-cover rounded-xl shadow-lg mb-4 md:mb-0"
+            className="w- h-40 md:w-80 md:h-40 border-2 border-white/30 object-fill rounded-xl shadow-lg mb-4 md:mb-0"
           />
           <div className="flex-1 flex flex-col justify-between h-full w-full">
             <h3 className="text-lg md:text-2xl font-bold text-white mb-2 drop-shadow-lg text-center md:text-left">
