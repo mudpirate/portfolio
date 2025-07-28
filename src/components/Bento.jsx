@@ -114,7 +114,7 @@ const Bento = ({ isMobile }) => {
 
   return (
     <div className="flex flex-col gap-8 p-4 max-w-5xl mx-auto">
-      <div className="bg-white/10 text-white p-4 rounded-lg border-2 flex flex-col md:flex-row items-center md:items-start border-white/40 shiny-gradient shadow gap-4">
+      <div className="bg-white/10 text-white p-4 rounded-lg border-2 flex flex-col md:flex-row items-center md:items-start border-white/40 md:shiny-gradient shadow gap-4">
         <img
           src={logo}
           alt="Profile"
@@ -128,7 +128,7 @@ const Bento = ({ isMobile }) => {
         </div>
       </div>
 
-      <div className="bg-white/10 text-white  p-4 rounded-lg shadow border-2 border-white/40 shiny-gradient">
+      <div className="bg-white/10 text-white  p-4 rounded-lg shadow border-2 border-white/40 lg:shiny-gradient">
         <div className="flex justify-center mb-4">
           <h1 className="text-2xl text-center w-70 text-white font-bold bg-gray-950 border-[0.5px] border-white/30 rounded-xl py-2 px-4 shadow-lg mb-2">
             About Me
@@ -151,12 +151,12 @@ const Bento = ({ isMobile }) => {
         </ul>
       </div>
 
-      <div className="bg-white/10 text-white p-4 border-2 border-white/40 shiny-gradient rounded-lg shadow">
+      <div className="bg-white/10 text-white p-4 border-2 border-white/40 md:shiny-gradient rounded-lg shadow">
         <Skills />
       </div>
       <Projects />
 
-      <div className="bg-white/10 text-white p-4 rounded-lg border-2 border-white/40 shiny-gradient shadow">
+      <div className="bg-white/10 text-white p-4 rounded-lg border-2 border-white/40 md:shiny-gradient shadow">
         <div className="flex justify-center mb-4">
           <h1 className="text-2xl text-center w-70 text-white font-bold bg-gray-950 border-[0.5px] border-white/30 rounded-xl py-2 px-4 shadow-lg mb-2">
             Contact Me
@@ -189,7 +189,7 @@ const Bento = ({ isMobile }) => {
         </form>
       </div>
 
-      <div className="bg-white/10 text-white p-4 rounded-lg border-2 border-white/40 shiny-gradient shadow">
+      <div className="bg-white/10 text-white p-4 rounded-lg border-2 border-white/40 md:shiny-gradient shadow">
         <div className="flex justify-center mb-4">
           <h1 className="text-2xl text-center w-70 text-white font-bold bg-gray-950 border-[0.5px] border-white/30 rounded-xl py-2 px-4 shadow-lg mb-2">
             Socials
@@ -211,7 +211,7 @@ const Bento = ({ isMobile }) => {
         </div>
       </div>
 
-      <div className="bg-white/10 border-2 border-white/40 shiny-gradient text-white p-4 rounded-lg shadow text-center">
+      <div className="bg-white/10 border-2 border-white/40 md:shiny-gradient text-white p-4 rounded-lg shadow text-center">
         <p className="italic">"{quotes[currentQuote].text}"</p>
         <p className="text-sm text-white/70">
           - {quotes[currentQuote].source} ({quotes[currentQuote].anime})
