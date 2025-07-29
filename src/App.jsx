@@ -24,8 +24,8 @@ function App() {
 
   return (
     <>
-      <div className="h-full bg-white/20 flex justify-center items-center">
-        <div className="       ">
+      <div className="h-full bg-black flex justify-center items-center">
+        <div className="    ">
           <Bento isMobile={isMobile} />
         </div>
       </div>

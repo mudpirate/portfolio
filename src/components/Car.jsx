@@ -59,7 +59,7 @@ const Car = ({ cars }) => {
               {car.tech?.map((tech, idx) => (
                 <span
                   key={idx}
-                  className="px-3 py-1 rounded-full border-2 capitalize border-gray-300 text-white text-xs sm:text-sm md:text-base font-medium shadow hover:bg-cyan-600/30 transition-all duration-150"
+                  className="px-3 py-1 rounded-full border-2 capitalize border-gray-300 text-white text-xs sm:text-sm md:text-base font-medium shadow hover:bg-white/10 transition-all duration-150"
                 >
                   {tech}
                 </span>

@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Abel&family=Bitcount+Prop+Double:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 html {
   scroll-behavior: smooth;
 }
@@ -23,7 +24,7 @@ html {
 body {
   @apply bg-black min-h-screen;
   -webkit-overflow-scrolling: touch;
-  font-family: "Abel", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 @keyframes shine {
@@ -48,10 +49,10 @@ body {
   width: 100%;
   height: 100%;
   background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.1) 50%,
-    rgba(255, 255, 255, 0) 100%
+    135deg,
+    rgba(7, 7, 7, 0.1) 0%,
+    rgba(14, 13, 13, 0.3) 50%,
+    rgba(12, 12, 12, 0.1) 100%
   );
   background-size: 200% 100%;
   background-repeat: no-repeat;
