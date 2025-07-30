@@ -13,7 +13,7 @@ const Card = () => {
       img: image5,
       title: "The Pitch",
       git: "https://github.com/mudpirate/Football-blog",
-      link: "",
+      link: "https://football-blog-one.vercel.app",
       description: `The Pitch is a full stack blog platform featuring robust user authentication and authorization, AI-powered blog generation using Gemini AI, a rich text editor for post creation, dynamic filtering and search, personalized user dashboards, and image uploads with optimization via ImageKit. The platform is fully responsive and optimized for performance.`,
       tech: [
         "React",
