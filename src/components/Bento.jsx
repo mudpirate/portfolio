@@ -95,7 +95,7 @@ const Bento = ({ isMobile }) => {
   }, []);
 
   const [displayText, setDisplayText] = useState("");
-  const fullText = "Hoola Amigos, Let's turn some black coffee into code";
+  const fullText = "Weelcome Devs, Let's turn some black coffee into code";
 
   useEffect(() => {
     let index = 0;
@@ -121,7 +121,7 @@ const Bento = ({ isMobile }) => {
           className="w-32 h-32 md:w-48 md:h-48 border-2 rounded-2xl border-gray-500 object-cover"
         />
         <div className="  md:w-full md:h-50 md:flex md:justify-center md:items-center">
-          <p className="text-3xl sm:text-5xl md:text-3xl md:ml-3 lg:text-4xl font-extrabold  ">
+          <p className="text-3xl sm:text-5xl md:text-3xl md:ml-3 lg:text-4xl  ">
             {displayText}
             <span className="animate-blink">💻</span>
           </p>
