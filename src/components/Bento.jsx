@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import logo from "../assets/images/knight2.webp";
+import logo from "../assets/images/knight2.jpg";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import { motion } from "framer-motion";
@@ -100,7 +100,7 @@ const Bento = ({ isMobile }) => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-8 px-8 py-5 w-[100vw] md:max-w-4xl md:mx-auto">
+    <div className=" ml-2 w-[95vw] min-h-screen overflow-x-hidden  bg-black flex flex-col justify-center items-center gap-8 px-3 py-3 xl:px-30 xl:py-5">
       <Navbar
         onScrollTo={(section) => {
           if (section === "skills")
@@ -111,20 +111,18 @@ const Bento = ({ isMobile }) => {
             contactRef.current?.scrollIntoView({ behavior: "smooth" });
         }}
       />
+
       <motion.div
-        initial={{ opacity: 0, x: -100 }} // starts off-screen
-        animate={{ opacity: 1, x: 0 }} // slides in
+        initial={{ opacity: 0, x: -100 }}
+        animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
-        className="border border-gray-400  sm:min-h-[83vh] md:border-gray-400 rounded-lg bg-white/10 md:w-full md:h-full lg:h-[65vh] md:flex md:justify-center"
+        className="min-h-[65vh] w-[80vw] border border-gray-400 rounded-lg bg-white/10 flex justify-center items-center"
       >
-        {" "}
-        <div className="bg-white/10 sm:h-[83vh] text-white h-[40vh] md:w-full md:h-full rounded-lg  flex flex-col md:flex-row  justify-center items-center md:items-start border-gray-400  md:shiny-gradient shadow gap-4">
-          <img
-            src={logo}
-            alt="Profile"
-            className="w-full h-full sm:h-full md:w-full md:h-full  rounded-lg  border-gray-500  md:object-cover"
-          />
-        </div>
+        <img
+          src={logo}
+          alt="Profile"
+          className="w-full h-[65vh] xl:h-[80vh] object-cover rounded-lg"
+        />
       </motion.div>
 
       <motion.div
@@ -132,26 +130,24 @@ const Bento = ({ isMobile }) => {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6 }}
-        className="bg-white/10 text-white min-h-[42vh] sm:min-h-full p-4 rounded-lg shadow border border-gray-400  lg:shiny-gradient"
+        className="bg-white/10 w-[80vw] text-white min-h-[25vh] p-4 rounded-lg shadow border border-gray-400"
       >
-        <div className="flex justify-center mb-4">
-          <h1 className="text-2xl text-center w-70 text-white font-bold bg-gray-950 border-[0.5px] border-white/30 rounded-xl py-2 px-4 shadow-lg mb-2">
+        <div className="flex justify-center  mb-4">
+          <h1 className="text-2xl text-center w-70 font-bold bg-gray-950 border border-white/30 rounded-xl py-2 px-4 shadow-lg">
             About Me
           </h1>
         </div>
-
         <ul>
-          <li className="text-2xl text-white ">
-            Hi, I'm Nomesh — a curious builder and a full-stack developer
+          <li className="text-2xl">
+            Hi, I'm Nomesh — a curious builder and full-stack developer{" "}
             <span className="animate-blink ml-2">💻</span>
-          </li>{" "}
-          <li className="text-md mt-2  text-gray-300">
-            I love crafting sleek, high-performance apps using Nextjs, React,
-            TypeScript, Express, Tailwind CSS, and React Native.
-          </li>{" "}
-          <li className="text-md mt-2 text-gray-300 ">
-            I enjoy turning ideas into real-world projects that solve problems
-            and look great doing it.
+          </li>
+          <li className="text-md mt-2 text-gray-300">
+            I build apps with Next.js, React, TypeScript, Express, Tailwind CSS,
+            and React Native.
+          </li>
+          <li className="text-md mt-2 text-gray-300">
+            I love solving problems and creating great UI/UX.
           </li>
         </ul>
       </motion.div>
@@ -162,17 +158,17 @@ const Bento = ({ isMobile }) => {
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.8 }}
         ref={skillsRef}
-        className="bg-white/10  text-white p-4 border border-gray-400  md:shiny-gradient rounded-lg shadow"
+        className="bg-white/10 w-[80vw] text-white p-4 border border-gray-400 rounded-lg shadow"
       >
         <Skills />
       </motion.div>
+
       <motion.div
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.05 }}
         transition={{ duration: 0.8 }}
       >
-        {" "}
         <Projects ref={projectRef} />
       </motion.div>
 
@@ -182,14 +178,13 @@ const Bento = ({ isMobile }) => {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6 }}
         ref={contactRef}
-        className="bg-white/10 text-white p-4 rounded-lg border border-gray-400  md:shiny-gradient shadow"
+        className="bg-white/10 w-[80vw] text-white p-4 rounded-lg border border-gray-400 shadow"
       >
         <div className="flex justify-center mb-4">
-          <h1 className="text-2xl text-center w-70 text-white font-bold bg-gray-950 border-[0.5px] border-white/30 rounded-xl py-2 px-4 shadow-lg mb-2">
+          <h1 className="text-2xl text-center w-70 font-bold bg-gray-950 border border-white/30 rounded-xl py-2 px-4 shadow-lg">
             Contact Me
           </h1>
         </div>
-
         <form
           action="https://formspree.io/f/xldnpykv"
           method="post"
@@ -209,7 +204,7 @@ const Bento = ({ isMobile }) => {
           ></textarea>
           <button
             type="submit"
-            className="bg-white/20 w-full sm:w-90 py-2 border border-gray-400 mx-auto text-center rounded hover:bg-white/30 font-semibold"
+            className="bg-white/20 w-full py-2 border border-gray-400 text-center rounded hover:bg-white/30 font-semibold"
           >
             Send Message
           </button>
@@ -221,10 +216,10 @@ const Bento = ({ isMobile }) => {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.6 }}
-        className="bg-white/10 text-white p-4 rounded-lg border border-gray-400  md:shiny-gradient shadow"
+        className="bg-white/10 w-[80vw] text-white p-4 rounded-lg border border-gray-400 shadow"
       >
         <div className="flex justify-center mb-4">
-          <h1 className="text-2xl text-center w-70 text-white font-bold bg-gray-950 border-[0.5px] border-white/30 rounded-xl py-2 px-4 shadow-lg mb-2">
+          <h1 className="text-2xl text-center w-70 font-bold bg-gray-950 border border-white/30 rounded-xl py-2 px-4 shadow-lg">
             Socials
           </h1>
         </div>
@@ -244,14 +239,15 @@ const Bento = ({ isMobile }) => {
         </div>
       </motion.div>
 
-      <div className="bg-white/10 border border-gray-400  md:shiny-gradient text-white p-4 rounded-lg shadow text-center">
+      <div className="bg-white/10 border border-gray-400 text-white p-4 rounded-lg shadow text-center">
         <p className="italic">"{quotes[currentQuote].text}"</p>
         <p className="text-sm text-white/70">
-          - {quotes[currentQuote].source} ({quotes[currentQuote].anime})
+          - {quotes[currentQuote].source} ({quotes[currentQuote].movie})
         </p>
       </div>
-      <div className="  md:hidden text-white p-4 rounded-lg shadow text-center">
-        <p className=""> Made With 🖤 By Nomesh</p>
+
+      <div className="text-white text-center p-4">
+        <p>Made with ❤️ by Nomesh</p>
       </div>
     </div>
   );

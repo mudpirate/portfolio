@@ -25,6 +25,9 @@ body {
   @apply bg-black min-h-screen;
   -webkit-overflow-scrolling: touch;
   font-family: "Quicksand", sans-serif;
+  padding: 0%;
+  margin: 0%;
+  background: ;
 }
 
 @keyframes shine {

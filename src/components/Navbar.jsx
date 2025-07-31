@@ -17,14 +17,14 @@ const Navbar = ({ onScrollTo }) => {
       initial={{ opacity: 0, x: -100 }} // starts off-screen
       animate={{ opacity: 1, x: 0 }} // slides in
       transition={{ duration: 0.5, ease: "easeInOut" }}
-      className=" p-2 md:px-4 md:py-3 flex justify-center md:justify-between border border-gray-400  bg-white/10  items-center rounded-lg"
+      className=" py-4 px-4 backdrop-blur-md w-[82vw] md:px-4 md:py-3 flex justify-center md:justify-between gap-10 border border-gray-400 bg-white/10  items-center rounded-lg"
     >
-      <motion.div className="flex  gap-3 sm:gap-3">
+      <motion.div className="flex  gap-2 sm:gap-3">
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           transition={{ type: "spring", stiffness: 300 }}
-          className="text-white bg-gray-950 border border-gray-400 px-2 py-1 sm:px-8 sm:py-2 rounded-lg"
+          className="text-white bg-gray-950 border border-gray-400 px-1 py-1 sm:px-8 sm:py-2 rounded-lg"
         >
           Home
         </motion.button>
@@ -33,7 +33,7 @@ const Navbar = ({ onScrollTo }) => {
           whileTap={{ scale: 0.95 }}
           transition={{ type: "spring", stiffness: 300 }}
           onClick={() => onScrollTo("skills")}
-          className="text-white bg-gray-950 border border-gray-400 px-2 sm:px-8 sm:py-2 rounded-lg"
+          className="text-white bg-gray-950 border border-gray-400 px-1 py-1 sm:px-8 sm:py-2 rounded-lg"
         >
           Skills
         </motion.button>
@@ -42,7 +42,7 @@ const Navbar = ({ onScrollTo }) => {
           whileTap={{ scale: 0.95 }}
           transition={{ type: "spring", stiffness: 300 }}
           onClick={() => onScrollTo("projects")}
-          className="text-white bg-gray-950 border border-gray-400 px-2 sm:px-8 sm:py-2 rounded-lg"
+          className="text-white bg-gray-950 border border-gray-400 px-1 py-1 sm:px-8 sm:py-2 rounded-lg"
         >
           Projects
         </motion.button>
@@ -51,7 +51,7 @@ const Navbar = ({ onScrollTo }) => {
           whileTap={{ scale: 0.95 }}
           transition={{ type: "spring", stiffness: 300 }}
           onClick={() => onScrollTo("contact")}
-          className="text-white bg-gray-950 border border-gray-400 px-2 sm:px-8 sm:py-2 rounded-lg"
+          className="text-white bg-gray-950 border border-gray-400 px-1 py-1 sm:px-8 sm:py-2 rounded-lg"
         >
           Contact
         </motion.button>
