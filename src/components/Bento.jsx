@@ -100,7 +100,7 @@ const Bento = ({ isMobile }) => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-8 p-3 max-w-94 sm:max-w-5xl mx-auto">
+    <div className="flex flex-col gap-8 p-3 overflow-x-hidden w-full md:max-w-4xl mx-auto">
       <Navbar
         onScrollTo={(section) => {
           if (section === "skills")
