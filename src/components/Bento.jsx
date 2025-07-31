@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
-import logo from "../assets/profile.jpg";
+import React, { useState, useEffect, useRef } from "react";
+import logo from "../assets/images/knight2.webp";
 import Skills from "./Skills";
 import Projects from "./Projects";
+import { motion } from "framer-motion";
 import {
   FaDiscord,
   FaTwitter,
@@ -10,6 +11,7 @@ import {
   FaInstagram,
   FaGithub,
 } from "react-icons/fa";
+import Navbar from "./Navbar";
 
 const Bento = ({ isMobile }) => {
   const socials = [
@@ -86,6 +88,9 @@ const Bento = ({ isMobile }) => {
   ];
 
   const [currentQuote, setCurrentQuote] = useState(0);
+  const projectRef = useRef(null);
+  const skillsRef = useRef(null);
+  const contactRef = useRef(null);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -94,41 +99,41 @@ const Bento = ({ isMobile }) => {
     return () => clearInterval(timer);
   }, []);
 
-  const [displayText, setDisplayText] = useState("");
-  const fullText = "Weelcome Devs, Let's turn some black coffee into code";
-
-  useEffect(() => {
-    let index = 0;
-    const interval = setInterval(() => {
-      if (index >= fullText.length) {
-        clearInterval(interval);
-        return;
-      }
-
-      setDisplayText((prev) => prev + fullText.charAt(index));
-      index += 1;
-    }, 60);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <div className="flex flex-col gap-8 p-4 max-w-5xl  mx-auto">
-      <div className="bg-white/10 text-white p-4 rounded-lg border-2 flex flex-col md:flex-row items-center md:items-start border-gray-400  md:shiny-gradient shadow gap-4">
-        <img
-          src={logo}
-          alt="Profile"
-          className="w-32 h-32 md:w-48 md:h-48 border-2 rounded-2xl border-gray-500 object-cover"
-        />
-        <div className="  md:w-full md:h-50 md:flex md:justify-center md:items-center">
-          <p className="text-3xl sm:text-5xl md:text-3xl md:ml-3 lg:text-4xl  ">
-            {displayText}
-            <span className="animate-blink">💻</span>
-          </p>
+    <div className="flex flex-col gap-8 p-3 max-w-94 sm:max-w-5xl mx-auto">
+      <Navbar
+        onScrollTo={(section) => {
+          if (section === "skills")
+            skillsRef.current?.scrollIntoView({ behavior: "smooth" });
+          if (section === "projects")
+            projectRef.current?.scrollIntoView({ behavior: "smooth" });
+          if (section === "contact")
+            contactRef.current?.scrollIntoView({ behavior: "smooth" });
+        }}
+      />
+      <motion.div
+        initial={{ opacity: 0, x: -100 }} // starts off-screen
+        animate={{ opacity: 1, x: 0 }} // slides in
+        transition={{ duration: 0.8, ease: "easeInOut" }}
+        className="border border-gray-400 min-h-[40vh] sm:h-full md:border-gray-400 rounded-lg bg-white/10 md:w-full md:h-[65vh] md:flex md:justify-center"
+      >
+        {" "}
+        <div className="bg-white/10 text-white h-[40vh] md:w-full md:h-full rounded-lg  flex flex-col md:flex-row  justify-center items-center md:items-start border-gray-400  md:shiny-gradient shadow gap-4">
+          <img
+            src={logo}
+            alt="Profile"
+            className="w-full h-full md:w-full md:h-full  rounded-lg md:object-center border-gray-500 object-cover"
+          />
         </div>
-      </div>
+      </motion.div>
 
-      <div className="bg-white/10 text-white  p-4 rounded-lg shadow border-2 border-gray-400  lg:shiny-gradient">
+      <motion.div
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6 }}
+        className="bg-white/10 text-white min-h-[42vh] sm:min-h-full p-4 rounded-lg shadow border border-gray-400  lg:shiny-gradient"
+      >
         <div className="flex justify-center mb-4">
           <h1 className="text-2xl text-center w-70 text-white font-bold bg-gray-950 border-[0.5px] border-white/30 rounded-xl py-2 px-4 shadow-lg mb-2">
             About Me
@@ -136,27 +141,49 @@ const Bento = ({ isMobile }) => {
         </div>
 
         <ul>
-          <li className="text-2xl ">
+          <li className="text-2xl text-white ">
             Hi, I'm Nomesh — a curious builder and a full-stack developer
             <span className="animate-blink ml-2">💻</span>
           </li>{" "}
-          <li className="text-md mt-2 ">
+          <li className="text-md mt-2  text-gray-300">
             I love crafting sleek, high-performance apps using Nextjs, React,
             TypeScript, Express, Tailwind CSS, and React Native.
           </li>{" "}
-          <li className="text-md mt-2 ">
+          <li className="text-md mt-2 text-gray-300 ">
             I enjoy turning ideas into real-world projects that solve problems
             and look great doing it.
           </li>
         </ul>
-      </div>
+      </motion.div>
 
-      <div className="bg-white/10 text-white p-4 border-2 border-gray-400  md:shiny-gradient rounded-lg shadow">
+      <motion.div
+        initial={{ opacity: 0, x: 100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.8 }}
+        ref={skillsRef}
+        className="bg-white/10  text-white p-4 border border-gray-400  md:shiny-gradient rounded-lg shadow"
+      >
         <Skills />
-      </div>
-      <Projects />
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.8 }}
+      >
+        {" "}
+        <Projects ref={projectRef} />
+      </motion.div>
 
-      <div className="bg-white/10 text-white p-4 rounded-lg border-2 border-gray-400  md:shiny-gradient shadow">
+      <motion.div
+        initial={{ opacity: 0, x: 100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.6 }}
+        ref={contactRef}
+        className="bg-white/10 text-white p-4 rounded-lg border border-gray-400  md:shiny-gradient shadow"
+      >
         <div className="flex justify-center mb-4">
           <h1 className="text-2xl text-center w-70 text-white font-bold bg-gray-950 border-[0.5px] border-white/30 rounded-xl py-2 px-4 shadow-lg mb-2">
             Contact Me
@@ -182,14 +209,20 @@ const Bento = ({ isMobile }) => {
           ></textarea>
           <button
             type="submit"
-            className="bg-white/20 p-2 rounded hover:bg-white/30 font-semibold"
+            className="bg-white/20 w-full sm:w-90 py-2 border border-gray-400 mx-auto text-center rounded hover:bg-white/30 font-semibold"
           >
             Send Message
           </button>
         </form>
-      </div>
+      </motion.div>
 
-      <div className="bg-white/10 text-white p-4 rounded-lg border-2 border-gray-400  md:shiny-gradient shadow">
+      <motion.div
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.6 }}
+        className="bg-white/10 text-white p-4 rounded-lg border border-gray-400  md:shiny-gradient shadow"
+      >
         <div className="flex justify-center mb-4">
           <h1 className="text-2xl text-center w-70 text-white font-bold bg-gray-950 border-[0.5px] border-white/30 rounded-xl py-2 px-4 shadow-lg mb-2">
             Socials
@@ -209,13 +242,16 @@ const Bento = ({ isMobile }) => {
             </a>
           ))}
         </div>
-      </div>
+      </motion.div>
 
-      <div className="bg-white/10 border-2 border-gray-400  md:shiny-gradient text-white p-4 rounded-lg shadow text-center">
+      <div className="bg-white/10 border border-gray-400  md:shiny-gradient text-white p-4 rounded-lg shadow text-center">
         <p className="italic">"{quotes[currentQuote].text}"</p>
         <p className="text-sm text-white/70">
           - {quotes[currentQuote].source} ({quotes[currentQuote].anime})
         </p>
+      </div>
+      <div className="  md:hidden text-white p-4 rounded-lg shadow text-center">
+        <p className=""> Made With 🖤 By Nomesh</p>
       </div>
     </div>
   );

@@ -26,7 +26,7 @@ import {
 } from "react-icons/tb";
 import { SiRedux } from "react-icons/si";
 
-const Skills = () => {
+const Skills = ({ ref }) => {
   // Custom Zustand SVG icon
   const ZustandIcon = () => (
     <svg
@@ -66,7 +66,7 @@ const Skills = () => {
   ];
 
   return (
-    <div className="h-full flex flex-col">
+    <div ref={ref} className="h-full  flex flex-col">
       <div className="flex justify-center mb-4">
         <h1 className="text-2xl text-center w-70 text-white font-bold bg-gray-950 border-[0.5px] border-white/30 rounded-xl py-2 px-4 shadow-lg mb-2">
           Skills

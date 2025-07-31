@@ -43,7 +43,7 @@ const Car = ({ cars }) => {
             <h3 className="text-lg md:text-2xl font-bold text-white mb-2 drop-shadow-lg text-center md:text-left">
               {car.title}
             </h3>
-            <p className="text-white/90 mb-2 text-sm md:text-base leading-relaxed text-center md:text-left">
+            <p className="text-gray-300 mb-2 text-sm md:text-base leading-relaxed text-center md:text-left">
               {car.description}
             </p>
 
@@ -59,7 +59,7 @@ const Car = ({ cars }) => {
               {car.tech?.map((tech, idx) => (
                 <span
                   key={idx}
-                  className="px-3 py-1 rounded-full border-2 capitalize border-gray-300 text-white text-xs sm:text-sm md:text-base font-medium shadow hover:bg-white/10 transition-all duration-150"
+                  className="px-3 py-1 rounded-full border-2 capitalize border-gray-300 text-gray-300 text-xs sm:text-sm md:text-base font-medium shadow hover:bg-white/10 transition-all duration-150"
                 >
                   {tech}
                 </span>

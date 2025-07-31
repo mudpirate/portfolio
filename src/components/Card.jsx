@@ -46,6 +46,7 @@ const Card = () => {
         "axios",
         "nodeJs",
         "MongoDB",
+        "Framer Motion",
       ],
     },
     {
@@ -55,7 +56,7 @@ const Card = () => {
       git: "https://github.com/mudpirate/e-commerce",
       link: "https://e-commerce-one-lyart-97.vercel.app",
       description: `🛒 A responsive E-Commerce frontend built with React and Tailwind CSS. Features include dynamic product listings, category-based filtering, a functional shopping cart, and smooth page navigation using React Router. Designed for scalability and fast user experience.`,
-      tech: ["React", "TailwindCss", "useReducer", "shadcnUI"],
+      tech: ["React", "TailwindCss", "useReducer", "shadcnUI", "Framer Motion"],
     },
 
     {
