@@ -115,14 +115,14 @@ const Bento = ({ isMobile }) => {
         initial={{ opacity: 0, x: -100 }} // starts off-screen
         animate={{ opacity: 1, x: 0 }} // slides in
         transition={{ duration: 0.8, ease: "easeInOut" }}
-        className="border border-gray-400  sm:min-h-[85vh] md:border-gray-400 rounded-lg bg-white/10 md:w-full md:h-full lg:h-[65vh] md:flex md:justify-center"
+        className="border border-gray-400  sm:min-h-[83vh] md:border-gray-400 rounded-lg bg-white/10 md:w-full md:h-full lg:h-[65vh] md:flex md:justify-center"
       >
         {" "}
-        <div className="bg-white/10 text-white h-[40vh] md:w-full md:h-full rounded-lg  flex flex-col md:flex-row  justify-center items-center md:items-start border-gray-400  md:shiny-gradient shadow gap-4">
+        <div className="bg-white/10 sm:h-[83vh] text-white h-[40vh] md:w-full md:h-full rounded-lg  flex flex-col md:flex-row  justify-center items-center md:items-start border-gray-400  md:shiny-gradient shadow gap-4">
           <img
             src={logo}
             alt="Profile"
-            className="w-full h-full md:w-full md:h-full  rounded-lg  border-gray-500  md:object-cover"
+            className="w-full h-full sm:h-full md:w-full md:h-full  rounded-lg  border-gray-500  md:object-cover"
           />
         </div>
       </motion.div>
