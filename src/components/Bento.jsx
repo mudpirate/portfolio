@@ -101,7 +101,7 @@ const Bento = ({ isMobile }) => {
 
   return (
     <div className=" ">
-      <div className="  min-h-screen overflow-x-hidden  bg-white/10 flex flex-col justify-center items-center gap-8  xl:px-30 xl:py-5">
+      <div className="  min-h-screen overflow-x-hidden  bg-white/10 flex flex-col justify-center items-center gap-8 py-5  xl:px-30 xl:py-5">
         <Navbar
           onScrollTo={(section) => {
             if (section === "skills")
