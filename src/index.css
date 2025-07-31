@@ -22,45 +22,11 @@ html {
   animation: blink 1s infinite;
 }
 body {
-  @apply bg-black min-h-screen;
+  @apply bg-black  min-h-screen;
   -webkit-overflow-scrolling: touch;
   font-family: "Quicksand", sans-serif;
   padding: 0%;
   margin: 0%;
-}
-
-@keyframes shine {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-}
-
-.shiny-gradient {
-  position: relative;
-  overflow: hidden;
-}
-
-.shiny-gradient::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    135deg,
-    rgba(7, 7, 7, 0.1) 0%,
-    rgba(14, 13, 13, 0.3) 50%,
-    rgba(12, 12, 12, 0.1) 100%
-  );
-  background-size: 200% 100%;
-  background-repeat: no-repeat;
-  animation: shine 2.5s linear infinite;
-  pointer-events: none;
-  z-index: 2;
 }
 
 /* Mobile performance optimizations */

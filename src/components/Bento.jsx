@@ -100,154 +100,151 @@ const Bento = ({ isMobile }) => {
   }, []);
 
   return (
-    <div className=" ml-2 w-[95vw] min-h-screen overflow-x-hidden  bg-black flex flex-col justify-center items-center gap-8 px-3 py-3 xl:px-30 xl:py-5">
-      <Navbar
-        onScrollTo={(section) => {
-          if (section === "skills")
-            skillsRef.current?.scrollIntoView({ behavior: "smooth" });
-          if (section === "projects")
-            projectRef.current?.scrollIntoView({ behavior: "smooth" });
-          if (section === "contact")
-            contactRef.current?.scrollIntoView({ behavior: "smooth" });
-        }}
-      />
-
-      <motion.div
-        initial={{ opacity: 0, x: -100 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, ease: "easeInOut" }}
-        className="min-h-[65vh] w-[80vw] border border-gray-400 rounded-lg bg-white/10 flex justify-center items-center"
-      >
-        <img
-          src={logo}
-          alt="Profile"
-          className="w-full h-[65vh] xl:h-[80vh] object-cover rounded-lg"
+    <div className=" ">
+      <div className="  min-h-screen overflow-x-hidden  bg-white/10 flex flex-col justify-center items-center gap-8  xl:px-30 xl:py-5">
+        <Navbar
+          onScrollTo={(section) => {
+            if (section === "skills")
+              skillsRef.current?.scrollIntoView({ behavior: "smooth" });
+            if (section === "projects")
+              projectRef.current?.scrollIntoView({ behavior: "smooth" });
+            if (section === "contact")
+              contactRef.current?.scrollIntoView({ behavior: "smooth" });
+          }}
         />
-      </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0, x: -100 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.6 }}
-        className="bg-white/10 w-[80vw] text-white min-h-[25vh] p-4 rounded-lg shadow border border-gray-400"
-      >
-        <div className="flex justify-center  mb-4">
-          <h1 className="text-2xl text-center w-70 font-bold bg-gray-950 border border-white/30 rounded-xl py-2 px-4 shadow-lg">
-            About Me
-          </h1>
-        </div>
-        <ul>
-          <li className="text-2xl">
-            Hi, I'm Nomesh — a curious builder and full-stack developer{" "}
-            <span className="animate-blink ml-2">💻</span>
-          </li>
-          <li className="text-md mt-2 text-gray-300">
-            I build apps with Next.js, React, TypeScript, Express, Tailwind CSS,
-            and React Native.
-          </li>
-          <li className="text-md mt-2 text-gray-300">
-            I love solving problems and creating great UI/UX.
-          </li>
-        </ul>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, x: 20 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.1 }}
-        transition={{ duration: 0.8 }}
-        ref={skillsRef}
-        className="bg-white/10 w-[80vw] text-white p-4 border border-gray-400 rounded-lg shadow"
-      >
-        <Skills />
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, x: -20 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.05 }}
-        transition={{ duration: 0.8 }}
-      >
-        <Projects ref={projectRef} />
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, x: 100 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.6 }}
-        ref={contactRef}
-        className="bg-white/10 w-[80vw] text-white p-4 rounded-lg border border-gray-400 shadow"
-      >
-        <div className="flex justify-center mb-4">
-          <h1 className="text-2xl text-center w-70 font-bold bg-gray-950 border border-white/30 rounded-xl py-2 px-4 shadow-lg">
-            Contact Me
-          </h1>
-        </div>
-        <form
-          action="https://formspree.io/f/xldnpykv"
-          method="post"
-          className="flex flex-col gap-4"
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          className="min-h-[65vh] xl:h-[84vh] w-[80vw] border border-gray-400 rounded-lg bg-white/10 flex justify-center items-center"
         >
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            className="p-2 rounded bg-white/20 placeholder-white/70 focus:outline-none"
+          <img
+            src={logo}
+            alt="Profile"
+            className="w-full h-[65vh] xl:h-[83vh] object-cover rounded-lg"
           />
-          <textarea
-            name="message"
-            rows="4"
-            placeholder="Your Message"
-            className="p-2 rounded bg-white/20 placeholder-white/70 focus:outline-none"
-          ></textarea>
-          <button
-            type="submit"
-            className="bg-white/20 w-full py-2 border border-gray-400 text-center rounded hover:bg-white/30 font-semibold"
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          className="bg-white/10 w-[80vw] text-white min-h-[25vh] p-4 rounded-lg shadow border border-gray-400"
+        >
+          <div className="flex justify-center  mb-4">
+            <h1 className="text-2xl text-center w-70 font-bold bg-gray-950 border border-white/30 rounded-xl py-2 px-4 shadow-lg">
+              About Me
+            </h1>
+          </div>
+          <ul>
+            <li className="text-2xl">
+              Hi, I'm Nomesh — a curious builder and full-stack developer{" "}
+              <span className="animate-blink ml-2">💻</span>
+            </li>
+            <li className="text-md mt-2 text-gray-300">
+              I build apps with Next.js, React, TypeScript, Express, Tailwind
+              CSS, and React Native.
+            </li>
+            <li className="text-md mt-2 text-gray-300">
+              I love solving problems and creating great UI/UX.
+            </li>
+          </ul>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          ref={skillsRef}
+          className="bg-white/10 w-[80vw] text-white p-4 border border-gray-400 rounded-lg shadow"
+        >
+          <Skills />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+        >
+          <Projects ref={projectRef} />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          ref={contactRef}
+          className="bg-white/10 w-[80vw] text-white p-4 rounded-lg border border-gray-400 shadow"
+        >
+          <div className="flex justify-center mb-4">
+            <h1 className="text-2xl text-center w-70 font-bold bg-gray-950 border border-white/30 rounded-xl py-2 px-4 shadow-lg">
+              Contact Me
+            </h1>
+          </div>
+          <form
+            action="https://formspree.io/f/xldnpykv"
+            method="post"
+            className="flex flex-col gap-4"
           >
-            Send Message
-          </button>
-        </form>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, x: -100 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.1 }}
-        transition={{ duration: 0.6 }}
-        className="bg-white/10 w-[80vw] text-white p-4 rounded-lg border border-gray-400 shadow"
-      >
-        <div className="flex justify-center mb-4">
-          <h1 className="text-2xl text-center w-70 font-bold bg-gray-950 border border-white/30 rounded-xl py-2 px-4 shadow-lg">
-            Socials
-          </h1>
-        </div>
-        <div className="flex flex-wrap justify-center gap-4">
-          {socials.map((social, index) => (
-            <a
-              key={index}
-              href={social.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col items-center w-20"
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              className="p-2 rounded bg-white/20 placeholder-white/70 focus:outline-none"
+            />
+            <textarea
+              name="message"
+              rows="4"
+              placeholder="Your Message"
+              className="p-2 rounded bg-white/20 placeholder-white/70 focus:outline-none"
+            ></textarea>
+            <button
+              type="submit"
+              className="bg-white/20 w-full py-2 border border-gray-400 text-center rounded hover:bg-white/30 font-semibold"
             >
-              <div className="text-3xl mb-1">{social.icon}</div>
-              <span className="text-sm text-center">{social.label}</span>
-            </a>
-          ))}
+              Send Message
+            </button>
+          </form>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          className="bg-white/10 w-[80vw] text-white p-4 rounded-lg border border-gray-400 shadow"
+        >
+          <div className="flex justify-center mb-4">
+            <h1 className="text-2xl text-center w-70 font-bold bg-gray-950 border border-white/30 rounded-xl py-2 px-4 shadow-lg">
+              Socials
+            </h1>
+          </div>
+          <div className="flex flex-wrap justify-center gap-4">
+            {socials.map((social, index) => (
+              <a
+                key={index}
+                href={social.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center w-20"
+              >
+                <div className="text-3xl mb-1">{social.icon}</div>
+                <span className="text-sm text-center">{social.label}</span>
+              </a>
+            ))}
+          </div>
+        </motion.div>
+
+        <div className="bg-white/10 border border-gray-400 text-white p-4 rounded-lg shadow text-center">
+          <p className="italic">"{quotes[currentQuote].text}"</p>
+          <p className="text-sm text-white/70">
+            - {quotes[currentQuote].source} ({quotes[currentQuote].movie})
+          </p>
         </div>
-      </motion.div>
 
-      <div className="bg-white/10 border border-gray-400 text-white p-4 rounded-lg shadow text-center">
-        <p className="italic">"{quotes[currentQuote].text}"</p>
-        <p className="text-sm text-white/70">
-          - {quotes[currentQuote].source} ({quotes[currentQuote].movie})
-        </p>
-      </div>
-
-      <div className="text-white text-center p-4">
-        <p>Made with ❤️ by Nomesh</p>
+        <div className="text-white text-center p-4">
+          <p>Made with ❤️ by Nomesh</p>
+        </div>
       </div>
     </div>
   );
