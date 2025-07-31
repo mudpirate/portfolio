@@ -122,7 +122,7 @@ const Bento = ({ isMobile }) => {
           <img
             src={logo}
             alt="Profile"
-            className="w-full h-full md:w-full md:h-full  rounded-lg md:object-center border-gray-500 object-cover"
+            className="w-full h-full md:w-full md:h-full  rounded-lg  border-gray-500 object-cover"
           />
         </div>
       </motion.div>
