@@ -100,7 +100,7 @@ const Bento = ({ isMobile }) => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-8 p-3 overflow-x-hidden w-full md:max-w-4xl mx-auto">
+    <div className="flex flex-col gap-8 px-8 py-5 w-[100vw] md:max-w-4xl md:mx-auto">
       <Navbar
         onScrollTo={(section) => {
           if (section === "skills")
@@ -157,7 +157,7 @@ const Bento = ({ isMobile }) => {
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, x: 100 }}
+        initial={{ opacity: 0, x: 20 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.8 }}
@@ -167,9 +167,9 @@ const Bento = ({ isMobile }) => {
         <Skills />
       </motion.div>
       <motion.div
-        initial={{ opacity: 0, x: -100 }}
+        initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.1 }}
+        viewport={{ once: true, amount: 0.05 }}
         transition={{ duration: 0.8 }}
       >
         {" "}
@@ -179,7 +179,7 @@ const Bento = ({ isMobile }) => {
       <motion.div
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.1 }}
+        viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6 }}
         ref={contactRef}
         className="bg-white/10 text-white p-4 rounded-lg border border-gray-400  md:shiny-gradient shadow"
