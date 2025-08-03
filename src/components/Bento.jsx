@@ -101,8 +101,8 @@ const Bento = ({ isMobile }) => {
   }, []);
 
   return (
-    <div className="grid grid-cols-1 md:max-w-screen-xl mx-auto  ">
-      <div className="   bg-white/10  px-2 py-4  xl:px-30 xl:py-5">
+    <div className="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-4">
+      <div className="    px-2 py-4  xl:px-30 xl:py-5">
         <Navbar
           onScrollTo={(section) => {
             if (section === "skills")
@@ -118,7 +118,7 @@ const Bento = ({ isMobile }) => {
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="min-h-[20vh] xl:h-[84vh] mt-5 w-full md:w-[90vw] md:h-[70vh] mb-5 max-w-screen-xl mx-auto  border border-gray-400 rounded-lg bg-white/10 flex justify-center items-center"
+          className="min-h-[20vh] xl:h-[84vh] mt-5 w-full md:h-[70vh] mb-5   border border-gray-400 rounded-lg bg-white/10 flex justify-center items-center"
         >
           <img
             src={logo}
@@ -131,30 +131,28 @@ const Bento = ({ isMobile }) => {
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="bg-white/10 w-full mb-5 md:w-[90vw]  mx-auto px-4 text-white  p-4 rounded-lg shadow border border-gray-400"
+          className="bg-white/10 w-full  mb-5  px-4 text-white p-4 rounded-lg border border-gray-400 shadow"
         >
-          <div className="flex justify-center  mb-4">
-            <h1 className="text-2xl text-center w-70 font-bold bg-gray-950 border border-white/30 rounded-xl py-2 px-4 shadow-lg">
+          <div className="flex justify-center mb-4">
+            <h1 className="text-xl sm:text-2xl font-bold w-70 text-center bg-gray-950 border border-white/30 rounded-xl py-2 px-4 shadow-lg">
               About Me
             </h1>
           </div>
-          <ul className="">
-            <div className="flex items-center ">
-              <p className="text-2xl font-bold">
-                Hi, I'm Nomesh — a curious builder and full-stack developer{" "}
-              </p>
-              <span className="animate-blink  ml-2">
-                <img src={float} alt="" className="w-10 h-10" />
-              </span>
-            </div>
+          <div className="flex flex-col md:flex-row md:items-center gap-4">
+            <p className="text-lg sm:text-xl font-bold">
+              Hi, I'm Nomesh — a curious builder and full-stack developer
+            </p>
+            <span className="animate-blink hidden md:block">
+              <img src={float} alt="" className="w-10 h-10" />
+            </span>
+          </div>
 
-            <li className="text-md mt-2 text-gray-300 font-semibold">
+          <ul className="mt-4 space-y-2 text-gray-300 font-semibold text-sm sm:text-base">
+            <li>
               I build apps with Next.js, React, TypeScript, Express, Tailwind
               CSS, and React Native.
             </li>
-            <li className="text-md mt-2 text-gray-300 font-semibold">
-              I love solving problems and creating great UI/UX.
-            </li>
+            <li>I love solving problems and creating great UI/UX.</li>
           </ul>
         </motion.div>
 
@@ -163,7 +161,7 @@ const Bento = ({ isMobile }) => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
           ref={skillsRef}
-          className="bg-white/10 w-full md:w-[90vw]  mb-5 max-w-screen-xl mx-auto px-4 text-white p-4 border border-gray-400 rounded-lg shadow"
+          className="bg-white/10 w-full   mb-5 px-4 text-white p-4 border border-gray-400 rounded-lg shadow"
         >
           <Skills />
         </motion.div>
@@ -182,7 +180,7 @@ const Bento = ({ isMobile }) => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
           ref={contactRef}
-          className="bg-white/10 w-full md:w-[90vw]  mb-5 max-w-screen-xl mx-auto px-4 text-white p-4 rounded-lg border border-gray-400 shadow"
+          className="bg-white/10 w-full  mb-5 px-4 text-white p-4 rounded-lg border border-gray-400 shadow"
         >
           <div className="flex justify-center mb-4">
             <h1 className="text-2xl text-center w-70 font-bold bg-gray-950 border border-white/30 rounded-xl py-2 px-4 shadow-lg">
@@ -219,7 +217,7 @@ const Bento = ({ isMobile }) => {
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="bg-white/10 w-full mb-5 md:w-[90vw]  max-w-screen-xl mx-auto px-4 text-white p-4 rounded-lg border border-gray-400 shadow"
+          className="bg-white/10 w-full mb-5  px-4 text-white p-4 rounded-lg border border-gray-400 shadow"
         >
           <div className="flex justify-center mb-4">
             <h1 className="text-2xl text-center w-70 font-bold bg-gray-950 border border-white/30 rounded-xl py-2 px-4 shadow-lg">
@@ -242,14 +240,14 @@ const Bento = ({ isMobile }) => {
           </div>
         </motion.div>
 
-        <div className="bg-white/10 md:w-[90vw]  border w-full mb-5 max-w-screen-xl mx-auto px-4 border-gray-400 text-white p-4 rounded-lg shadow text-center">
+        <div className="bg-white/10  border w-full mb-5  px-4 border-gray-400 text-white p-4 rounded-lg shadow text-center">
           <p className="italic">"{quotes[currentQuote].text}"</p>
           <p className="text-sm text-white/70">
             - {quotes[currentQuote].source} ({quotes[currentQuote].movie})
           </p>
         </div>
 
-        <div className="text-white md:w-[90vw]  w-full mb-5 max-w-screen-xl mx-auto px-4 text-center p-4">
+        <div className="text-white  mx-auto px-4 text-center p-4">
           <p>Made with ❤️ by Nomesh</p>
         </div>
       </div>
