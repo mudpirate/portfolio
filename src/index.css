@@ -23,12 +23,13 @@ html {
   animation: blink 1s infinite;
 }
 body {
-  @apply bg-black  min-h-screen;
+  @apply min-h-screen;
   -webkit-overflow-scrolling: touch;
   font-family: "Quicksand", sans-serif;
   padding: 0%;
   margin: 0%;
   overflow-x: hidden;
+  background: url("/src/assets/images/brick-black-wall-texture-background-dark-brickwork-pattern-block-stone-structure-backdrop-brick-wall_541122-483.avif");
 }
 
 /* Mobile performance optimizations */
@@ -40,5 +41,29 @@ body {
   .shiny-gradient {
     animation: none !important;
     background: linear-gradient(135deg, #222 0%, #333 100%) !important;
+  }
+}
+
+.emoji {
+  font-size: 3rem;
+  position: absolute;
+  animation: moveAround 8s linear infinite;
+}
+
+@keyframes moveAround {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(80vw, 10vh);
+  }
+  50% {
+    transform: translate(60vw, 70vh);
+  }
+  75% {
+    transform: translate(10vw, 60vh);
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }
