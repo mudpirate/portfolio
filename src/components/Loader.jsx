@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import Load from "../assets/images/load.png";
+import Load from "../assets/images/load.webp";
 import Bento from "./Bento"; // your main app
 
 export default function MotionProgress() {

@@ -29,7 +29,7 @@ body {
   margin: 0;
   overflow-x: hidden;
 
-  background: url("/src/assets/images/un2.png") no-repeat center center fixed;
+  background: url("/src/assets/images/un2.webp") no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
 }

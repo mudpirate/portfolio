@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import logo from "../assets/images/bat.jpg";
+import logo from "../assets/images/bat.webp";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import { motion } from "framer-motion";
-import float from "../assets/images/float2.png";
+import float from "../assets/images/float2.webp";
 import {
   FaDiscord,
   FaTwitter,
