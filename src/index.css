@@ -23,13 +23,15 @@ html {
   animation: blink 1s infinite;
 }
 body {
-  @apply min-h-screen;
   -webkit-overflow-scrolling: touch;
   font-family: "Quicksand", sans-serif;
-  padding: 0%;
-  margin: 0%;
+  padding: 0;
+  margin: 0;
   overflow-x: hidden;
-  background: url("/src/assets/images/brick-black-wall-texture-background-dark-brickwork-pattern-block-stone-structure-backdrop-brick-wall_541122-483.jpg");
+
+  background: url("/src/assets/images/un2.png") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
 }
 
 /* Mobile performance optimizations */
