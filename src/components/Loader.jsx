@@ -27,8 +27,6 @@ export default function MotionProgress() {
     return () => clearInterval(timer);
   }, []);
 
-  if (showPortfolio) return <Bento isMobile={false} />;
-
   return (
     <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black px-4">
       <div className="mb-10">
