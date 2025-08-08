@@ -18,6 +18,7 @@ const Card = () => {
       description: `ZenFunds is a modern finance tracking app powered by AI, designed to give you complete clarity over your money. It securely tracks your income, expenses, and savings in real-time, then uses AI to generate smart summaries and insights from all your data. Whether it’s spotting unusual spending, predicting monthly cash flow, or suggesting saving strategies, ZenFund turns raw numbers into easy-to-understand reports and actionable advice — helping you stay in control and make smarter financial decisions effortlessly.`,
       tech: [
         "Next.js",
+        "typescript",
         "Deepseek AI",
         "TailwindCss",
         "neonDB",
