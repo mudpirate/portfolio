@@ -5,9 +5,27 @@ import image2 from "../assets/images/image2.webp";
 import image3 from "../assets/images/image3.webp";
 import image4 from "../assets/images/image4.webp";
 import image5 from "../assets/images/newproject.webp";
+import image6 from "../assets/images/ww.webp";
 
 const Card = () => {
   const projects = [
+    {
+      id: 6,
+      img: image6,
+      title: "ZenFunds",
+      git: "https://github.com/mudpirate/Zenfunds",
+      link: "https://zenfunds.vercel.app",
+      description: `ZenFunds is a modern finance tracking app powered by AI, designed to give you complete clarity over your money. It securely tracks your income, expenses, and savings in real-time, then uses AI to generate smart summaries and insights from all your data. Whether it’s spotting unusual spending, predicting monthly cash flow, or suggesting saving strategies, ZenFund turns raw numbers into easy-to-understand reports and actionable advice — helping you stay in control and make smarter financial decisions effortlessly.`,
+      tech: [
+        "Next.js",
+        "Deepseek AI",
+        "TailwindCss",
+        "neonDB",
+        "prisma",
+
+        "Clerk",
+      ],
+    },
     {
       id: 5,
       img: image5,
