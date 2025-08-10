@@ -15,7 +15,7 @@ const Card = () => {
       title: "ZenFunds",
       git: "https://github.com/mudpirate/Zenfunds",
       link: "https://zenfunds.vercel.app",
-      description: `ZenFunds is a modern finance tracking app powered by AI, designed to give you complete clarity over your money. It securely tracks your income, expenses, and savings in real-time, then uses AI to generate smart summaries and insights from all your data. Whether it’s spotting unusual spending, predicting monthly cash flow, or suggesting saving strategies, ZenFund turns raw numbers into easy-to-understand reports and actionable advice — helping you stay in control and make smarter financial decisions effortlessly.`,
+      description: `ZenFunds, A modern finance managing app  with advanced AI-powered report analysis, giving clear insights into your income, expenses, and savings. It features a real-time dashboard to monitor spending, predict cash flow, and suggest smarter saving strategies.`,
       tech: [
         "Next.js",
         "typescript",
@@ -33,7 +33,8 @@ const Card = () => {
       title: "The Pitch",
       git: "https://github.com/mudpirate/Football-blog",
       link: "https://football-blog-one.vercel.app",
-      description: `The Pitch is a full stack blog platform featuring robust user authentication and authorization, AI-powered blog generation using Gemini AI, a rich text editor for post creation, dynamic filtering and search, personalized user dashboards, and image uploads with optimization via ImageKit. The platform is fully responsive and optimized for performance.`,
+      description: `
+The Pitch is an AI-powered blog platform that lets you create, manage, and discover content with ease. Featuring Gemini AI for smart blog generation, a rich text editor, advanced search and filtering, personalized dashboards, and optimized image uploads, it delivers a seamless, responsive, and high-performance blogging experience.`,
       tech: [
         "React",
         "Gemini AI",
@@ -54,7 +55,7 @@ const Card = () => {
       title: "ConGame",
       git: "https://github.com/mudpirate/Gaming-rental",
       link: "https://gaming-rental.vercel.app",
-      description: `🎮 ConGame is a full stack gaming console rental platform built with the MERN stack and Tailwind CSS. It features secure user authentication, a real-time booking system, an admin dashboard for managing consoles and users, and real-time availability checks. The platform includes a modern UI using shadcnUI, owner analytics, and game listings with detailed specifications. `,
+      description: `ConGame is a full-stack gaming console rental platform with secure authentication, real-time bookings, and live availability checks. It offers an admin dashboard for managing consoles and users, detailed game listings, owner analytics, and a sleek modern UI built with shadcnUI.`,
       tech: [
         "React",
         "TailwindCss",
@@ -69,22 +70,12 @@ const Card = () => {
       ],
     },
     {
-      id: 1,
-      img: image1,
-      title: "FootLand",
-      git: "https://github.com/mudpirate/e-commerce",
-      link: "https://e-commerce-one-lyart-97.vercel.app",
-      description: `🛒 A responsive E-Commerce frontend built with React and Tailwind CSS. Features include dynamic product listings, category-based filtering, a functional shopping cart, and smooth page navigation using React Router. Designed for scalability and fast user experience.`,
-      tech: ["React", "TailwindCss", "useReducer", "shadcnUI", "Framer Motion"],
-    },
-
-    {
       id: 4,
       img: image4,
       title: "BotVerse",
       git: "https://github.com/mudpirate/Bot-Verse-chat-app",
       link: "https://chevy-malibu-demo.com",
-      description: `💬 Bot-Verse is a real-time chat application built with the MERN stack and Socket.io.
+      description: `Bot-Verse is a real-time chat application built with the MERN stack and Socket.io.
     Supports user authentication, private messaging, and instant communication via WebSockets.
     Designed with a responsive UI, making chatting seamless across devices.`,
       tech: [
@@ -98,12 +89,22 @@ const Card = () => {
       ],
     },
     {
+      id: 1,
+      img: image1,
+      title: "FootLand",
+      git: "https://github.com/mudpirate/e-commerce",
+      link: "https://e-commerce-one-lyart-97.vercel.app",
+      description: ` A responsive E-Commerce frontend built with React and Tailwind CSS. Features include dynamic product listings, category-based filtering, a functional shopping cart, and smooth page navigation using React Router. Designed for scalability and fast user experience.`,
+      tech: ["React", "TailwindCss", "useReducer", "shadcnUI", "Framer Motion"],
+    },
+
+    {
       id: 3,
       img: image3,
       title: "Portfolio Website",
       git: "https://github.com/mudpirate/portfolio",
       link: "https://portfolio-tmmd.vercel.app",
-      description: `🌐 Personal Portfolio Website built with modern web technologies to showcase projects and skills.
+      description: ` Personal Portfolio Website built with modern web technologies to showcase projects and skills.
 Features sections like About, Projects, Contact, and smooth navigation with a responsive, clean UI.
 Hosted on Vercel for fast performance and designed to reflect a professional developer profile.`,
       tech: ["React", "TailwindCss", "shadcnUI"],
