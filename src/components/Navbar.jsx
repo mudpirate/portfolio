@@ -24,7 +24,7 @@ const Navbar = ({ onScrollTo }) => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           transition={{ type: "spring", stiffness: 300 }}
-          className="text-black  bg-white font-bold border border-gray-400 px-2 py-1 sm:px-8 sm:py-2 rounded-lg"
+          className="text-black  bg-white/60 font-bold border border-gray-400 px-2 py-1 sm:px-8 sm:py-2 rounded-lg"
         >
           Home
         </motion.button>
@@ -33,7 +33,7 @@ const Navbar = ({ onScrollTo }) => {
           whileTap={{ scale: 0.95 }}
           transition={{ type: "spring", stiffness: 300 }}
           onClick={() => onScrollTo("skills")}
-          className="text-black  bg-white font-bold border border-gray-400 px-2 py-1 sm:px-8 sm:py-2 rounded-lg"
+          className="text-black  bg-white/60 font-bold border border-gray-400 px-2 py-1 sm:px-8 sm:py-2 rounded-lg"
         >
           Skills
         </motion.button>
@@ -42,7 +42,7 @@ const Navbar = ({ onScrollTo }) => {
           whileTap={{ scale: 0.95 }}
           transition={{ type: "spring", stiffness: 300 }}
           onClick={() => onScrollTo("projects")}
-          className="text-black  bg-white font-bold border border-gray-400 px-2 py-1 sm:px-8 sm:py-2 rounded-lg"
+          className="text-black  bg-white/60 font-bold border border-gray-400 px-2 py-1 sm:px-8 sm:py-2 rounded-lg"
         >
           Projects
         </motion.button>
@@ -51,7 +51,7 @@ const Navbar = ({ onScrollTo }) => {
           whileTap={{ scale: 0.95 }}
           transition={{ type: "spring", stiffness: 300 }}
           onClick={() => onScrollTo("contact")}
-          className="text-black  bg-white font-bold border border-gray-400 px-2 py-1 sm:px-8 sm:py-2 rounded-lg"
+          className="text-black  bg-white/60 font-bold border border-gray-400 px-2 py-1 sm:px-8 sm:py-2 rounded-lg"
         >
           Contact
         </motion.button>
