@@ -134,7 +134,7 @@ const Bento = ({ isMobile }) => {
           className="bg-black/90 w-full  mb-5  px-4 text-white p-4 rounded-lg border border-gray-400 shadow"
         >
           <div className="flex justify-center mb-4">
-            <h1 className="text-xl sm:text-2xl font-bold w-70 text-center text-black  bg-white/60 border border-white/30 rounded-xl py-2 px-4 shadow-lg">
+            <h1 className="text-xl sm:text-2xl font-bold w-70 text-center text-white  border ">
               About Me
             </h1>
           </div>
@@ -183,7 +183,7 @@ const Bento = ({ isMobile }) => {
           className="bg-black/90 w-full  mb-5 px-4 text-white p-4 rounded-lg border border-gray-400 shadow"
         >
           <div className="flex justify-center mb-4">
-            <h1 className="text-2xl text-center w-70 font-bold text-black  bg-white/60 border border-white/30 rounded-xl py-2 px-4 shadow-lg">
+            <h1 className="text-2xl text-center w-70 font-bold text-white border">
               Contact Me
             </h1>
           </div>
@@ -220,7 +220,7 @@ const Bento = ({ isMobile }) => {
           className="bg-black/90  w-full mb-5  px-4 text-white p-4 rounded-lg border border-gray-400 shadow"
         >
           <div className="flex justify-center mb-4">
-            <h1 className="text-2xl text-center w-70 font-bold text-black  bg-white/60 border border-white/30 rounded-xl py-2 px-4 shadow-lg">
+            <h1 className="text-2xl text-center w-70 font-bold text-white border">
               Socials
             </h1>
           </div>

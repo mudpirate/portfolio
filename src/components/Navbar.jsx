@@ -19,12 +19,12 @@ const Navbar = ({ onScrollTo }) => {
       transition={{ duration: 0.5, ease: "easeInOut" }}
       className=" py-4  backdrop-blur-md w-full px-4 md:px-4 md:py-3 flex justify-center md:justify-between gap-10 border border-gray-400 bg-black/90  items-center rounded-lg"
     >
-      <motion.div className="flex  gap-2 sm:gap-3">
+      <motion.div className="flex  gap-6 sm:gap-10">
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           transition={{ type: "spring", stiffness: 300 }}
-          className="text-black  bg-white/60 font-bold border border-gray-400 px-2 py-1 sm:px-8 sm:py-2 rounded-lg"
+          className="text-white   font-bold  "
         >
           Home
         </motion.button>
@@ -33,7 +33,7 @@ const Navbar = ({ onScrollTo }) => {
           whileTap={{ scale: 0.95 }}
           transition={{ type: "spring", stiffness: 300 }}
           onClick={() => onScrollTo("skills")}
-          className="text-black  bg-white/60 font-bold border border-gray-400 px-2 py-1 sm:px-8 sm:py-2 rounded-lg"
+          className="text-white   font-bold  "
         >
           Skills
         </motion.button>
@@ -42,7 +42,7 @@ const Navbar = ({ onScrollTo }) => {
           whileTap={{ scale: 0.95 }}
           transition={{ type: "spring", stiffness: 300 }}
           onClick={() => onScrollTo("projects")}
-          className="text-black  bg-white/60 font-bold border border-gray-400 px-2 py-1 sm:px-8 sm:py-2 rounded-lg"
+          className="text-white   font-bold  "
         >
           Projects
         </motion.button>
@@ -51,7 +51,7 @@ const Navbar = ({ onScrollTo }) => {
           whileTap={{ scale: 0.95 }}
           transition={{ type: "spring", stiffness: 300 }}
           onClick={() => onScrollTo("contact")}
-          className="text-black  bg-white/60 font-bold border border-gray-400 px-2 py-1 sm:px-8 sm:py-2 rounded-lg"
+          className="text-white   font-bold  "
         >
           Contact
         </motion.button>
