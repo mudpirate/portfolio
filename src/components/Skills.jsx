@@ -68,7 +68,7 @@ const Skills = ({ ref }) => {
   return (
     <div ref={ref} className="h-full  flex flex-col">
       <div className="flex justify-center mb-4">
-        <h1 className="text-2xl text-center w-70 text-white font-bold bg-gray-950 border-[0.5px] border-white/30 rounded-xl py-2 px-4 shadow-lg mb-2">
+        <h1 className="text-2xl text-center w-70  font-bold text-black  bg-white border-[0.5px] border-white/30 rounded-xl py-2 px-4 shadow-lg mb-2">
           Skills
         </h1>
       </div>

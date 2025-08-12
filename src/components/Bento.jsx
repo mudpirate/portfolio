@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import logo from "../assets/images/bat.webp";
+import logo from "../assets/images/bat33.webp";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import { motion } from "framer-motion";
@@ -123,7 +123,7 @@ const Bento = ({ isMobile }) => {
           <img
             src={logo}
             alt="Profile"
-            className="w-full h-full xl:h-[83vh] object-cover object-top rounded-lg"
+            className="w-full h-full xl:h-[83.5vh] object-cover object-top rounded-lg"
           />
         </motion.div>
 
@@ -131,10 +131,10 @@ const Bento = ({ isMobile }) => {
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="bg-white/10 w-full  mb-5  px-4 text-white p-4 rounded-lg border border-gray-400 shadow"
+          className="bg-black/90 w-full  mb-5  px-4 text-white p-4 rounded-lg border border-gray-400 shadow"
         >
           <div className="flex justify-center mb-4">
-            <h1 className="text-xl sm:text-2xl font-bold w-70 text-center bg-gray-950 border border-white/30 rounded-xl py-2 px-4 shadow-lg">
+            <h1 className="text-xl sm:text-2xl font-bold w-70 text-center text-black  bg-white border border-white/30 rounded-xl py-2 px-4 shadow-lg">
               About Me
             </h1>
           </div>
@@ -161,7 +161,7 @@ const Bento = ({ isMobile }) => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
           ref={skillsRef}
-          className="bg-white/10 w-full   mb-5 px-4 text-white p-4 border border-gray-400 rounded-lg shadow"
+          className="bg-black/90  w-full   mb-5 px-4 text-white p-4 border border-gray-400 rounded-lg shadow"
         >
           <Skills />
         </motion.div>
@@ -180,10 +180,10 @@ const Bento = ({ isMobile }) => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
           ref={contactRef}
-          className="bg-white/10 w-full  mb-5 px-4 text-white p-4 rounded-lg border border-gray-400 shadow"
+          className="bg-black/90 w-full  mb-5 px-4 text-white p-4 rounded-lg border border-gray-400 shadow"
         >
           <div className="flex justify-center mb-4">
-            <h1 className="text-2xl text-center w-70 font-bold bg-gray-950 border border-white/30 rounded-xl py-2 px-4 shadow-lg">
+            <h1 className="text-2xl text-center w-70 font-bold text-black  bg-white border border-white/30 rounded-xl py-2 px-4 shadow-lg">
               Contact Me
             </h1>
           </div>
@@ -217,10 +217,10 @@ const Bento = ({ isMobile }) => {
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="bg-white/10 w-full mb-5  px-4 text-white p-4 rounded-lg border border-gray-400 shadow"
+          className="bg-black/90  w-full mb-5  px-4 text-white p-4 rounded-lg border border-gray-400 shadow"
         >
           <div className="flex justify-center mb-4">
-            <h1 className="text-2xl text-center w-70 font-bold bg-gray-950 border border-white/30 rounded-xl py-2 px-4 shadow-lg">
+            <h1 className="text-2xl text-center w-70 font-bold text-black  bg-white border border-white/30 rounded-xl py-2 px-4 shadow-lg">
               Socials
             </h1>
           </div>
@@ -240,7 +240,7 @@ const Bento = ({ isMobile }) => {
           </div>
         </motion.div>
 
-        <div className="bg-white/10  border w-full mb-5  px-4 border-gray-400 text-white p-4 rounded-lg shadow text-center">
+        <div className="bg-black/90   border w-full mb-5  px-4 border-gray-400 text-white p-4 rounded-lg shadow text-center">
           <p className="italic">"{quotes[currentQuote].text}"</p>
           <p className="text-sm text-white/70">
             - {quotes[currentQuote].source} ({quotes[currentQuote].movie})
