@@ -1,18 +1,29 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import web from "../assets/images/web.webp";
 
 const Loader = () => {
+  const [imgLoaded, setImgLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = web;
+    img.onload = () => setImgLoaded(true);
+  }, []);
+
   return (
-    <div className="flex items-center  min-h-screen xl:justify-between bg-black text-center md:text-left">
+    <div className="flex items-center min-h-screen xl:justify-between bg-black text-center md:text-left">
       {/* Side Image (hidden on small screens) */}
-      <img
-        src={web}
-        alt="Decorative loader background"
-        className="hidden md:block w-1/3 h-[100vh] object-cover border-white"
-      />
+      {imgLoaded && (
+        <img
+          src={web}
+          alt="Decorative loader background"
+          className="hidden md:block w-1/3 h-[100vh] object-cover border-white"
+        />
+      )}
 
       {/* Loader + Text */}
-      <div className="flex flex-col md:flex-col items-center xl:mx-auto gap-4 md:gap-6">
+      <div className="flex flex-col items-center xl:mx-auto gap-4 md:gap-6">
         {/* Spinner */}
         <motion.div
           className="w-12 h-12 border-4 border-gray-300 border-t-black rounded-full"
