@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import web from "../assets/images/naina.png";
+import web from "../assets/images/naina.webp";
 
 const Loader = () => {
   const [imgLoaded, setImgLoaded] = useState(false);
