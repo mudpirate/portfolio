@@ -21,7 +21,7 @@ const Loader = () => {
       </div>
 
       {/* Background for medium+ screens (image) */}
-      <div className="hidden md:block absolute bg-black inset-0">
+      <div className=" hidden md:block absolute bg-black inset-0">
         {imgLoaded && (
           <motion.img
             src={web}
@@ -36,7 +36,7 @@ const Loader = () => {
 
       {/* Loader Spinner (always centered) */}
       <motion.div
-        className="absolute inset-0 md:inset-0 md:top-1/3 md:left-30   flex items-center justify-center"
+        className="absolute inset-0 md:inset-0 md:top-1/3 md:left-73   flex items-center justify-center"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.4 }}
