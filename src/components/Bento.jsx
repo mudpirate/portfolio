@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import logo from "../assets/images/bat33.webp";
+import logo from "../assets/images/bat44.jpg";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import { motion } from "framer-motion";
