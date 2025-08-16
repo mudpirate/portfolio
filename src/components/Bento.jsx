@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import logo from "../assets/images/bat44.jpg";
+import logo from "../assets/images/veg.png";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import { motion } from "framer-motion";
@@ -101,7 +101,7 @@ const Bento = ({ isMobile }) => {
   }, []);
 
   return (
-    <div className="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-4">
+    <div className="w-full  md:max-w-7xl mx-auto px-4 sm:px-6 lg:px-4">
       <div className="    px-2 py-4  xl:px-30 xl:py-5">
         <Navbar
           onScrollTo={(section) => {
@@ -118,7 +118,7 @@ const Bento = ({ isMobile }) => {
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="mt-5 mb-5 hidden  md:flex w-full min-h-[20vh] md:h-[70vh] xl:h-[84vh] border border-gray-400 rounded-lg bg-white/10 justify-center items-center overflow-hidden"
+          className="mt-5 mb-5 hidden  md:flex w-full min-h-[20vh] md:h-[87vh] xl:h-[87vh] border border-gray-400 rounded-lg bg-white/10 justify-center items-center overflow-hidden"
         >
           <img src={logo} alt="Profile" className="w-full h-full " />
         </motion.div>
@@ -130,7 +130,7 @@ const Bento = ({ isMobile }) => {
           className="bg-black/90 w-full  mb-5 mt-5 md:mt-1 px-4 text-white p-4 rounded-lg border border-gray-400 shadow"
         >
           <div className="flex justify-center mb-4">
-            <h1 className="text-xl sm:text-2xl font-bold w-70 text-center text-white  border ">
+            <h1 className="text-xl sm:text-2xl font-bold w-70 text-center text-white py-2 rounded-sm  border ">
               About Me
             </h1>
           </div>
@@ -179,7 +179,7 @@ const Bento = ({ isMobile }) => {
           className="bg-black/90 w-full  mb-5 px-4 text-white p-4 rounded-lg border border-gray-400 shadow"
         >
           <div className="flex justify-center mb-4">
-            <h1 className="text-2xl text-center w-70 font-bold text-white border">
+            <h1 className="text-2xl text-center py-2 rounded-sm w-70 font-bold text-white border">
               Contact Me
             </h1>
           </div>
@@ -216,7 +216,7 @@ const Bento = ({ isMobile }) => {
           className="bg-black/90  w-full mb-5  px-4 text-white p-4 rounded-lg border border-gray-400 shadow"
         >
           <div className="flex justify-center mb-4">
-            <h1 className="text-2xl text-center w-70 font-bold text-white border">
+            <h1 className="text-2xl text-center py-2 rounded-sm w-70 font-bold text-white border">
               Socials
             </h1>
           </div>

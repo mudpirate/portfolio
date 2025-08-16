@@ -49,7 +49,7 @@ const Car = ({ cars }) => {
 
             {/* Technologies Header */}
             <div className="w-full">
-              <p className="text-white font-semibold text-sm md:text-base bg-black px-4 py-2 rounded-md w-fit mx-auto md:mx-0 mb-2">
+              <p className="text-white font-semibold text-sm md:text-base bg-black border border-gray-300 rounded-xl  px-4 py-2 w-fit mx-auto md:mx-0 mb-4 mt-2">
                 Technologies Used
               </p>
             </div>

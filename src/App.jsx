@@ -13,7 +13,7 @@ function App() {
     };
 
     // Simulate loading time (e.g., fetching data)
-    setTimeout(() => setLoading(false), 2300);
+    setTimeout(() => setLoading(false), 3000);
 
     checkMobile();
     window.addEventListener("resize", checkMobile);

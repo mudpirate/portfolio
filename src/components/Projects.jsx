@@ -10,7 +10,7 @@ const Projects = ({ isMobile, ref }) => {
         }  border rounded-xl bg-black/90   border-gray-400 w-full mb-5  px-4 p-3  shadow-xl  flex flex-col   `}
       >
         <div className="flex justify-center mb-2 ">
-          <h2 className="text-2xl text-center w-70 text-white border font-bold mb-2">
+          <h2 className="text-2xl text-center w-70 py-2 rounded-sm text-white border font-bold mb-2">
             Projects
           </h2>
         </div>

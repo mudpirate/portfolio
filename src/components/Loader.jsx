@@ -28,7 +28,7 @@ const Loader = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.6 }}
       >
-        ~ Alfred Pennyworth
+        ~ Alfred Pennyworth (Batman 2005)
       </motion.div>
     </div>
   );
