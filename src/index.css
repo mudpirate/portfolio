@@ -23,14 +23,12 @@ html {
   animation: blink 1s infinite;
 }
 body {
-  -webkit-overflow-scrolling: touch;
+  @apply bg-black/90;
   font-family: "Quicksand", sans-serif;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
 
-  background: url("/src/assets/images/bat.webp");
-  background-size: cover;
   height: 100vh;
 }
 

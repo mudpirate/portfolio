@@ -115,19 +115,10 @@ const Bento = ({ isMobile }) => {
         />
 
         <motion.div
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="mt-5 mb-5 hidden  md:flex w-full min-h-[20vh] md:h-[87vh] xl:h-[87vh] border border-gray-400 rounded-lg bg-white/10 justify-center items-center overflow-hidden"
-        >
-          <img src={logo} alt="Profile" className="w-full h-full " />
-        </motion.div>
-
-        <motion.div
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="bg-black/90 w-full  mb-5 mt-5 md:mt-1 px-4 text-white p-4 rounded-lg border border-gray-400 shadow"
+          className="bg-black/90 w-full  mb-5 mt-5 md:mt-5 px-4 text-white p-4 rounded-lg border border-gray-400 shadow"
         >
           <div className="flex justify-center mb-4">
             <h1 className="text-xl sm:text-2xl font-bold w-70 text-center text-white py-2 rounded-sm  border ">
@@ -169,6 +160,15 @@ const Bento = ({ isMobile }) => {
           className="mb-5 w-full  "
         >
           <Projects ref={projectRef} />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          className="mt-5 mb-5 hidden  md:flex w-full min-h-[20vh] md:h-[87vh] xl:h-[87vh] border border-gray-400 rounded-lg bg-white/10 justify-center items-center overflow-hidden"
+        >
+          <img src={logo} alt="Profile" className="w-full h-full " />
         </motion.div>
 
         <motion.div
