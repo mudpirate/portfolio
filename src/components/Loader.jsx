@@ -1,47 +1,35 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import web from "../assets/images/web.webp";
 
 const Loader = () => {
-  const [imgLoaded, setImgLoaded] = useState(false);
-
-  useEffect(() => {
-    const img = new Image();
-    img.src = web;
-    img.onload = () => setImgLoaded(true);
-  }, []);
-
   return (
-    <div className="flex items-center min-h-screen xl:justify-between bg-black text-center md:text-left">
-      {/* Side Image (hidden on small screens) */}
-      {imgLoaded && (
-        <img
-          src={web}
-          alt="Decorative loader background"
-          className="hidden md:block w-1/3 h-[100vh] object-cover border-white"
-        />
-      )}
+    <div className="relative min-h-screen h-[100vh] w-full bg-black text-white flex flex-col items-center justify-center px-4 text-center">
+      {/* Loader Spinner */}
+      <motion.div
+        className="w-12 h-12 border-4 border-gray-300 border-t-black rounded-full mb-6"
+        animate={{ rotate: 360 }}
+        transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
+        style={{ willChange: "transform" }}
+      />
 
-      {/* Loader + Text */}
-      <div className="flex flex-col items-center xl:mx-auto gap-4 md:gap-6">
-        {/* Spinner */}
-        <motion.div
-          className="w-12 h-12 border-4 border-gray-300 border-t-black rounded-full"
-          animate={{ rotate: 360 }}
-          transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
-          style={{ willChange: "transform" }}
-          role="status"
-          aria-label="Loading..."
-        />
+      {/* Quote */}
+      <motion.h1
+        className="font-extralight italic text-2xl md:text-3xl max-w-2xl"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+      >
+        "Why do we fall, Bruce? So we can learn to pick ourselves up."
+      </motion.h1>
 
-        {/* Quote */}
-        <span className="text-gray-300 font-extralight italic text-2xl md:text-3xl max-w-xl">
-          "Why do we fall, Bruce? So we can learn to pick ourselves up."
-        </span>
-        <div className="text-white font-medium text-2xl">
-          ~ Alfred Pennyworth
-        </div>
-      </div>
+      {/* Author */}
+      <motion.div
+        className="text-lg mt-3 font-medium"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.6 }}
+      >
+        ~ Alfred Pennyworth (Batman 2005)
+      </motion.div>
     </div>
   );
 };

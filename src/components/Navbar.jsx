@@ -17,7 +17,7 @@ const Navbar = ({ onScrollTo }) => {
       initial={{ opacity: 0, x: -100 }} // starts off-screen
       animate={{ opacity: 1, x: 0 }} // slides in
       transition={{ duration: 0.5, ease: "easeInOut" }}
-      className=" py-4  backdrop-blur-md w-full px-4 md:px-4 md:py-3 flex justify-center md:justify-between gap-10 border border-gray-400 bg-black/90  items-center rounded-lg"
+      className=" py-4  backdrop-blur-md w-full px-4 md:px-6 md:py-5 flex justify-center md:justify-between gap-10 border border-gray-400 bg-black/90  items-center rounded-lg"
     >
       <motion.div className="flex  gap-6 sm:gap-10">
         <motion.button
