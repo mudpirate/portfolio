@@ -32,7 +32,7 @@ const Card = () => {
       img: image5,
       title: "The Pitch",
       git: "https://github.com/mudpirate/Football-blog",
-      link: "https://football-blog-one.vercel.app",
+      link: "https://the-pitch-ruby.vercel.app",
       description: `
 The Pitch is an AI-powered blog platform that lets you create, manage, and discover content with ease. Featuring Gemini AI for smart blog generation, a rich text editor, advanced search and filtering, personalized dashboards, and optimized image uploads, it delivers a seamless, responsive, and high-performance blogging experience.`,
       tech: [

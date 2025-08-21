@@ -120,11 +120,7 @@ const Bento = ({ isMobile }) => {
           transition={{ duration: 0.8, ease: "easeInOut" }}
           className="mt-5 mb-5 w-full min-h-[20vh] md:h-[70vh] xl:h-[84vh] border border-gray-400 rounded-lg bg-white/10 flex justify-center items-center overflow-hidden"
         >
-          <img
-            src={logo}
-            alt="Profile"
-            className="w-full h-full object-cover object-top"
-          />
+          <img src={logo} alt="Profile" className="w-full h-full " />
         </motion.div>
 
         <motion.div
