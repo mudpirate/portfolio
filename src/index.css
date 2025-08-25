@@ -23,7 +23,7 @@ html {
   animation: blink 1s infinite;
 }
 body {
-  @apply bg-black/90;
+  @apply bg-gradient-to-l from-black/90 via-black/85 to-black;
   font-family: "Quicksand", sans-serif;
   padding: 0;
   margin: 0;
